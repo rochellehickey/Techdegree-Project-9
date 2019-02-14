@@ -1,0 +1,22 @@
+* {
+  box-sizing: border-box;
+}
+
+/* ---------------- */
+/* ----- SVGS ----- */
+/* ---------------- */
+
+.iconDashboardPath,
+.iconMembersPath,
+.iconSettingsPath,
+.iconVisitsPath {
+  fill: #FFFFFF;
+}
+
+.top-Nav {
+  background: #7576BE;
+}
+
+.side-Nav {
+  background: #4D4A77;
+}
