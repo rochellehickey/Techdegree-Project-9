@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+.member-profile-picture {
+  border-radius: 50%;
+}
+
 /* ---------------- */
 /* ----- SVGS ----- */
 /* ---------------- */
@@ -13,10 +17,16 @@
   fill: #FFFFFF;
 }
 
-.top-Nav {
+.top-nav {
   background: #7576BE;
 }
 
 .side-Nav {
   background: #4D4A77;
+}
+
+#twitter-icon,
+#facebook-icon,
+#googlePlus-icon {
+  fill: #7576BE;
 }
