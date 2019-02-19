@@ -1,0 +1,33 @@
+/* ------------------------------------------- */
+/* --------------- TYPOGRAPHY ---------------- */
+/* ------------------------------------------- */
+
+h1,
+h2,
+p,
+input,
+ul,
+li,
+form {
+  font-family: $primary-font;
+}
+
+h1 {
+  font-size: $headerOne-size;
+  font-weight: $font-weight-regular;
+}
+
+h2 {
+  font-size: $headerTwo-size;
+  font-weight: $font-weight-bold;
+}
+
+p,
+ul,
+li,
+input,
+form {
+  font-size: $paragraph-size;
+  font-weight: $font-weight-regular;
+}
+
