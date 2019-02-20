@@ -2,8 +2,8 @@
 /* ------------------ MAIN ------------------- */
 /* ------------------------------------------- */
 
-@import 'base/typography';
 @import 'helpers/variables';
+@import 'base/typography';
 
 
 
@@ -11,4 +11,8 @@
 
 * {
   box-sizing: border-box;
+}
+
+img {
+  border-radius: 50%;
 }
