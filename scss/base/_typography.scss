@@ -15,6 +15,7 @@ form {
 h1 {
   font-size: $headerOne-size;
   font-weight: $font-weight-regular;
+  color: $dark-grey;
 }
 
 h2 {
@@ -29,5 +30,6 @@ input,
 form {
   font-size: $paragraph-size;
   font-weight: $font-weight-regular;
+  color: $dark-grey;
 }
 
