@@ -5,9 +5,54 @@
 .top-nav {
   background: $primary-color;
   width: 100%;
-  height: 150px;
+  height: auto;
+  margin: 0 auto;
+  padding: 12px 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.top-nav a p {
+  margin: 0 auto;
+}
+
+.member-profile-nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .side-nav {
   background: $secondary-color;
+  margin: 0 auto;
+  padding: 12px 10px;
+  display: flex;
+}
+
+.side-nav ul {
+  width: 100%;
+  padding: 0px;
+  margin: 0 auto;
+}
+
+.side-nav li {
+  list-style: none;
+  display: inline-block;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.member-profile-picture {
+  width: 30px;
+  height: auto;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.profileName {
+  text-decoration: none;
+  color: $white;
+  display: inline-block;
 }

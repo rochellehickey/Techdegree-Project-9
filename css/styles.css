@@ -6,7 +6,7 @@
 /* ------------------------------------------- */
 /* ------------------- COLOR ----------------- */
 /* --------------- TYPOGRAPHY ---------------- */
-@import url("https://fonts.googleapis.com/css?family=Roboto:400,500");
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet');
 /* ------------------------------------------- */
 /* --------------- TYPOGRAPHY ---------------- */
 /* ------------------------------------------- */
@@ -17,18 +17,20 @@ input,
 ul,
 li,
 form {
-  font-family: "Roboto", sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 h1 {
   font-size: 1.4em;
   font-weight: 400;
-  color: #505050;
+  color: #707070;
 }
 
 h2 {
-  font-size: 1.1em;
-  font-weight: 500;
+  font-size: 1em;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #707070;
 }
 
 p,
@@ -38,7 +40,7 @@ input,
 form {
   font-size: 1em;
   font-weight: 400;
-  color: #505050;
+  color: #707070;
 }
 
 /* ------------------------------------------- */
@@ -46,10 +48,146 @@ form {
 /* ------------------------------------------- */
 .top-nav {
   background: #7576BE;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: 12px 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.top-nav a p {
+  margin: 0 auto;
+}
+
+.member-profile-nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .side-nav {
   background: #4D4A77;
+  margin: 0 auto;
+  padding: 12px 10px;
+  display: flex;
+}
+
+.side-nav ul {
+  width: 100%;
+  padding: 0px;
+  margin: 0 auto;
+}
+
+.side-nav li {
+  list-style: none;
+  display: inline-block;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.member-profile-picture {
+  width: 30px;
+  height: auto;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.profileName {
+  text-decoration: none;
+  color: #FFF;
+  display: inline-block;
+}
+
+/* ------------------------------------------- */
+/* ------------------- SVGS ------------------ */
+/* ------------------------------------------- */
+/* ----------------- DASHBOARD --------------- */
+.iconDashboardPath,
+.iconMembersPath,
+.iconVisitsPath,
+.iconSettingsPath {
+  fill: #FFF;
+}
+
+.notificationBell {
+  width: 30px;
+  height: auto;
+}
+
+#iconDashboard,
+#iconMembers,
+#iconVisits,
+#iconSettings {
+  width: 50px;
+  height: auto;
+}
+
+/* --------------- SOCIAL STATS --------------- */
+#twitter-icon,
+#facebook-icon,
+#googlePlus-icon {
+  width: 80px;
+  height: 80px;
+  margin: auto 0 auto 15px;
+}
+
+#twitter-icon circle,
+#facebook-icon circle,
+#googlePlus-icon circle {
+  fill: #7576BE;
+}
+
+.twitter-block,
+.facebook-block,
+.googlePlus-block {
+  background: #FBFBFB;
+  width: 90%;
+  height: auto;
+  padding: 20px 10px;
+  margin: 20px 10px;
+  border: 1px solid #B3B2B6;
+  border-radius: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  fill: #FFF;
+}
+
+.stat-Name-Number {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  flex-align: left;
+}
+
+.stat-name {
+  font-size: 1.2em;
+  font-weight: 600;
+  color: #7576BE;
+  margin: 0 auto 0 0;
+}
+
+.stat-numbers {
+  color: #707070;
+  font-size: 3em;
+  font-weight: 300;
+  margin: 0 auto;
+}
+
+#twitter-icon,
+#facebook-icon,
+#googlePlus-icon {
+  width: 80px;
+  height: 80px;
+  margin-left: 15px;
+}
+
+#twitter-icon circle,
+#facebook-icon circle,
+#googlePlus-icon circle {
+  fill: #7576BE;
 }
 
 /* ----------------- GLOBAL ------------------ */
@@ -57,8 +195,22 @@ form {
   box-sizing: border-box;
 }
 
+body {
+  margin: 0 auto;
+}
+
 img {
   border-radius: 50%;
+}
+
+.yourApp {
+  font-family: "Open Sans", sans-serif;
+  text-decoration: none;
+  color: #FFF;
+}
+
+.division {
+  border-top: 1px solid #B3B2B6;
 }
 
 /*# sourceMappingURL=styles.css.map */

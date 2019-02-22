@@ -5,6 +5,8 @@
 @import 'helpers/variables';
 @import 'base/typography';
 @import 'components/navigation';
+@import 'components/svg';
+@import 'components/social-stats';
 
 
 
@@ -14,6 +16,20 @@
   box-sizing: border-box;
 }
 
+body {
+  margin: 0 auto;
+}
+
 img {
   border-radius: 50%;
+}
+
+.yourApp {
+  font-family: $primary-font;
+  text-decoration: none;
+  color: $white;
+}
+
+.division {
+  border-top: 1px solid $light-grey;
 }
