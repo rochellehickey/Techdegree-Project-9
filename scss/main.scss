@@ -7,6 +7,8 @@
 @import 'components/navigation';
 @import 'components/svg';
 @import 'components/social-stats';
+@import 'components/new-members';
+@import 'components/recent-activity';
 
 
 
@@ -22,6 +24,12 @@ body {
 
 img {
   border-radius: 50%;
+}
+
+.member-profile-picture {
+  width: 44px;
+  height: auto;
+  margin-right: 10px;
 }
 
 .yourApp {

@@ -1,0 +1,40 @@
+/* ------------------------------------------- */
+/* --------------- NEW MEMBERS --------------- */
+/* ------------------------------------------- */
+
+.new-member-block {
+  padding: 20px 0;
+  border-bottom: 1px solid $light-grey;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.new-member-block:last-child {
+  border: none;
+  margin-bottom: 20px;
+}
+
+.member-name-and-contact {
+  margin: 10px 0 0 0;
+  flex-direction: column;
+}
+
+.member-name-and-contact p {
+  margin: 0 auto;
+}
+
+.member-name-and-contact a {
+  font-size: $email-size;
+  margin: 0 auto;
+  line-height: 1;
+  text-decoration: none;
+  color: $primary-color;
+}
+
+.joined-date {
+  font-size: $date-joined-size;
+  margin: 20px 0 0 0;
+}
+

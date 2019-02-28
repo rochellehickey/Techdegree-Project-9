@@ -1,0 +1,37 @@
+/* ------------------------------------------- */
+/* ------------- RECENT ACTIVITY ------------- */
+/* ------------------------------------------- */
+
+.recent-activity-block {
+  padding: 20px 0;
+  border-bottom: 1px solid $light-grey;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.recent-activity-block:last-child {
+  border: none;
+  margin-bottom: 20px;
+}
+
+.recent-activity {
+  margin: 10px 0 0 0;
+}
+
+.hour-active {
+  font-size: $hour-active-size;
+  margin: 0;
+}
+
+.arrow {
+  position: absolute;
+  margin: auto 10px;
+  padding: .5em; /* Arrow size */
+  box-shadow: 1px -1px 0 1px $secondary-color inset;
+  border: solid transparent;
+  border-width: 0 0 1em 1em;
+  transform: rotate(225deg);
+}

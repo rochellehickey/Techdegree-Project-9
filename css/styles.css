@@ -31,6 +31,7 @@ h2 {
   font-weight: 400;
   text-transform: uppercase;
   color: #707070;
+  margin-top: 40px;
 }
 
 p,
@@ -131,7 +132,7 @@ form {
 #googlePlus-icon {
   width: 80px;
   height: 80px;
-  margin: auto 0 auto 15px;
+  margin: auto 10px;
 }
 
 #twitter-icon circle,
@@ -144,14 +145,16 @@ form {
 .facebook-block,
 .googlePlus-block {
   background: #FBFBFB;
-  width: 90%;
+  width: 100%;
+  max-width: 350px;
   height: auto;
   padding: 20px 10px;
-  margin: 20px 10px;
+  margin: 20px auto;
   border: 1px solid #B3B2B6;
   border-radius: 5px;
   display: flex;
   flex-wrap: wrap;
+  align-items: baseline;
   fill: #FFF;
 }
 
@@ -163,6 +166,7 @@ form {
 }
 
 .stat-name {
+  line-height: 1.1;
   font-size: 1.2em;
   font-weight: 600;
   color: #7576BE;
@@ -170,24 +174,88 @@ form {
 }
 
 .stat-numbers {
+  line-height: 1.1;
   color: #707070;
   font-size: 3em;
   font-weight: 300;
   margin: 0 auto;
 }
 
-#twitter-icon,
-#facebook-icon,
-#googlePlus-icon {
-  width: 80px;
-  height: 80px;
-  margin-left: 15px;
+/* ------------------------------------------- */
+/* --------------- NEW MEMBERS --------------- */
+/* ------------------------------------------- */
+.new-member-block {
+  padding: 20px 0;
+  border-bottom: 1px solid #B3B2B6;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-start;
 }
 
-#twitter-icon circle,
-#facebook-icon circle,
-#googlePlus-icon circle {
-  fill: #7576BE;
+.new-member-block:last-child {
+  border: none;
+  margin-bottom: 20px;
+}
+
+.member-name-and-contact {
+  margin: 10px 0 0 0;
+  flex-direction: column;
+}
+
+.member-name-and-contact p {
+  margin: 0 auto;
+}
+
+.member-name-and-contact a {
+  font-size: 0.9em;
+  margin: 0 auto;
+  line-height: 1;
+  text-decoration: none;
+  color: #7576BE;
+}
+
+.joined-date {
+  font-size: 0.9em;
+  margin: 20px 0 0 0;
+}
+
+/* ------------------------------------------- */
+/* ------------- RECENT ACTIVITY ------------- */
+/* ------------------------------------------- */
+.recent-activity-block {
+  padding: 20px 0;
+  border-bottom: 1px solid #B3B2B6;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.recent-activity-block:last-child {
+  border: none;
+  margin-bottom: 20px;
+}
+
+.recent-activity {
+  margin: 10px 0 0 0;
+}
+
+.hour-active {
+  font-size: 0.9em;
+  margin: 0;
+}
+
+.arrow {
+  position: absolute;
+  margin: auto 10px;
+  padding: 0.5em;
+  /* Arrow size */
+  box-shadow: 1px -1px 0 1px #4D4A77 inset;
+  border: solid transparent;
+  border-width: 0 0 1em 1em;
+  transform: rotate(225deg);
 }
 
 /* ----------------- GLOBAL ------------------ */
@@ -201,6 +269,12 @@ body {
 
 img {
   border-radius: 50%;
+}
+
+.member-profile-picture {
+  width: 44px;
+  height: auto;
+  margin-right: 10px;
 }
 
 .yourApp {
