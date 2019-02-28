@@ -5,32 +5,34 @@
 
 /* ------------------- COLOR ----------------- */
 
-$primary-color: #7576BE;
-$secondary-color: #4D4A77;
+$primary-color:         #7576BE;
+$secondary-color:       #4D4A77;
 
-$fields: #FBFBFB;
+$fields:                #FBFBFB;
 
-$white: #FFF;
-$light-grey: #B3B2B6;
-$dark-grey: #707070;
-$black: #000;
+$white:                 #FFF;
+$light-grey:            #B3B2B6;
+$dark-grey:             #707070;
+$black:                 #000;
 
 
 /* --------------- TYPOGRAPHY ---------------- */
 
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet');
 
-$primary-font: 'Open Sans', sans-serif;
+$primary-font:          'Open Sans', sans-serif;
 
-$font-weight-light: 300;
-$font-weight-regular: 400;
-$font-weight-bold: 600;
+$font-weight-light:     300;
+$font-weight-regular:   400;
+$font-weight-bold:      600;
 
-$headerOne-size: 1.4em;
-$headerTwo-size: 1em;
-$paragraph-size: 1em;
-$social-stat-title: 1.2em;
-$social-stat-size: 3em;
-$email-size: .9em;
-$date-joined-size: .9em;
-$hour-active-size: .9em;
+$headerOne-size:        1.4em;
+$headerTwo-size:        1em;
+$paragraph-size:        1em;
+$social-stat-title:     1.2em;
+$social-stat-size:      3em;
+$email-size:            .9em;
+$date-joined-size:      .9em;
+$hour-active-size:      .9em;
+$placeholder-size:      .9em;
+$button-size:           .7em;

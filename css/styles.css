@@ -16,7 +16,8 @@ p,
 input,
 ul,
 li,
-form {
+form,
+button {
   font-family: "Open Sans", sans-serif;
 }
 
@@ -38,10 +39,30 @@ p,
 ul,
 li,
 input,
-form {
+form,
+textarea,
+select {
   font-size: 1em;
   font-weight: 400;
   color: #707070;
+}
+
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+button {
+  color: #FFF;
+  font-size: 0.7em;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+::placeholder {
+  font: 300 0.9em "Open Sans", sans-serif;
+  color: #B3B2B6;
 }
 
 /* ------------------------------------------- */
@@ -226,7 +247,9 @@ form {
 .recent-activity-block {
   padding: 20px 40px 20px 0;
   background-image: url(../icons/icon-arrow-right.svg);
-  background-position: 50% 100%;
+  background-size: 40px;
+  background-position: center right;
+  background-repeat: no-repeat;
   border-bottom: 1px solid #B3B2B6;
   text-decoration: none;
   display: flex;
@@ -249,6 +272,29 @@ form {
   margin: 0;
 }
 
+/* ------------------------------------------- */
+/* --------------- MESSAGE USER -------------- */
+/* ------------------------------------------- */
+#search-for-user {
+  width: 100%;
+  height: 40px;
+  padding: 5px 10px;
+  margin: 0 0 10px 0;
+  border-radius: 5px;
+  border: 1px solid #B3B2B6;
+  background-color: #FBFBFB;
+}
+
+#msg {
+  width: 100%;
+  height: 100px;
+  padding: 5px 10px;
+  margin: 0 0 10px 0;
+  border-radius: 5px;
+  border: 1px solid #B3B2B6;
+  background-color: #FBFBFB;
+}
+
 /* ----------------- GLOBAL ------------------ */
 * {
   box-sizing: border-box;
@@ -260,6 +306,22 @@ body {
 
 img {
   border-radius: 50%;
+}
+
+button {
+  width: 100%;
+  height: 40px;
+  margin-bottom: 40px;
+  background-color: #7576BE;
+  border-radius: 5px;
+  border: 1px solid #4D4A77;
+}
+
+select {
+  width: 100%;
+  height: 40px;
+  background-color: #FBFBFB;
+  margin-bottom: 20px;
 }
 
 .member-profile-picture {
@@ -281,6 +343,17 @@ img {
 
 .division {
   border-top: 1px solid #B3B2B6;
+}
+
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
 }
 
 /*# sourceMappingURL=styles.css.map */

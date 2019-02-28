@@ -8,7 +8,8 @@ p,
 input,
 ul,
 li,
-form {
+form,
+button {
   font-family: $primary-font;
 }
 
@@ -30,9 +31,30 @@ p,
 ul,
 li,
 input,
-form {
+form,
+textarea,
+select {
   font-size: $paragraph-size;
   font-weight: $font-weight-regular;
   color: $dark-grey;
 }
+
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+button {
+  color: $white;
+  font-size: $button-size;
+  font-weight: $font-weight-bold;
+  text-transform: uppercase;
+}
+
+::placeholder {
+  font: 300 $placeholder-size $primary-font;
+  color: $light-grey;
+}
+
 

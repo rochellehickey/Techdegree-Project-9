@@ -5,7 +5,9 @@
 .recent-activity-block {
   padding: 20px 40px 20px 0;
   background-image: url(../icons/icon-arrow-right.svg);
-  background-position: 50% 100%;
+  background-size: 40px;
+  background-position: center right;
+  background-repeat: no-repeat;
   border-bottom: 1px solid $light-grey;
   text-decoration: none;
   display: flex;
