@@ -3,7 +3,9 @@
 /* ------------------------------------------- */
 
 .recent-activity-block {
-  padding: 20px 0;
+  padding: 20px 40px 20px 0;
+  background-image: url(../icons/icon-arrow-right.svg);
+  background-position: 50% 100%;
   border-bottom: 1px solid $light-grey;
   text-decoration: none;
   display: flex;
@@ -17,21 +19,11 @@
   margin-bottom: 20px;
 }
 
-.recent-activity {
+.recent-activity-list {
   margin: 10px 0 0 0;
 }
 
 .hour-active {
   font-size: $hour-active-size;
   margin: 0;
-}
-
-.arrow {
-  position: absolute;
-  margin: auto 10px;
-  padding: .5em; /* Arrow size */
-  box-shadow: 1px -1px 0 1px $secondary-color inset;
-  border: solid transparent;
-  border-width: 0 0 1em 1em;
-  transform: rotate(225deg);
 }

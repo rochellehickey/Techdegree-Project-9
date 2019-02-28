@@ -224,7 +224,9 @@ form {
 /* ------------- RECENT ACTIVITY ------------- */
 /* ------------------------------------------- */
 .recent-activity-block {
-  padding: 20px 0;
+  padding: 20px 40px 20px 0;
+  background-image: url(../icons/icon-arrow-right.svg);
+  background-position: 50% 100%;
   border-bottom: 1px solid #B3B2B6;
   text-decoration: none;
   display: flex;
@@ -238,24 +240,13 @@ form {
   margin-bottom: 20px;
 }
 
-.recent-activity {
+.recent-activity-list {
   margin: 10px 0 0 0;
 }
 
 .hour-active {
   font-size: 0.9em;
   margin: 0;
-}
-
-.arrow {
-  position: absolute;
-  margin: auto 10px;
-  padding: 0.5em;
-  /* Arrow size */
-  box-shadow: 1px -1px 0 1px #4D4A77 inset;
-  border: solid transparent;
-  border-width: 0 0 1em 1em;
-  transform: rotate(225deg);
 }
 
 /* ----------------- GLOBAL ------------------ */
