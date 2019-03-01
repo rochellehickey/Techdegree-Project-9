@@ -52,6 +52,14 @@ button {
   text-transform: uppercase;
 }
 
+.switch-light .switch-ios {
+  color: $white;
+  font-family: inherit;
+  font-size: $button-size;
+  font-weight: $font-weight-bold;
+  text-transform: uppercase;
+}
+
 ::placeholder {
   font: 300 $placeholder-size $primary-font;
   color: $light-grey;

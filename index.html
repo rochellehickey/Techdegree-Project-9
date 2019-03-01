@@ -259,15 +259,34 @@
       <div class="wrapper">
         <h2>Settings</h2>
         <p>Send Email Notifications</p>
+        <div class="slider-on-off">
+          <label class="switch-light switch-ios" onclick="">
+            <input type="checkbox">
+            <span>
+              <span>OFF</span>
+              <span>ON</span>
+              <a></a>
+            </span>
+          </label>
+        </div>
         <p>Set Profile to Public</p>
+        <div class="slider-on-off">
+          <label class="switch-light switch-ios" onclick="">
+            <input type="checkbox">
+            <span>
+              <span>OFF</span>
+              <span>ON</span>
+              <a></a>
+            </span>
+          </label>
+        </div>
         <form action="#" method="post">
           <select name="zone">
-            <optgroup label="Select Timezone">
-              <option value="1">Pacific (PST)</option>
-              <option value="2">Mountain (MST)</option>
-              <option value="3">Central (CST)</option>
-              <option value="4">Eastern (EST)</option>
-            </optgroup>
+              <option value="1" selected>Select Timezone</option>
+              <option value="2">Pacific (PST)</option>
+              <option value="3">Mountain (MST)</option>
+              <option value="4">Central (CST)</option>
+              <option value="5">Eastern (EST)</option>
           </select>
             <div class="button">
               <button type="submit">Save</button>
