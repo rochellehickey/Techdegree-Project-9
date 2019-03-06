@@ -5,6 +5,7 @@
   <meta charset = "UTF-8" />
   <link href="css/styles.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.js"></script>
 </head>
 <body>
   <header>
@@ -19,7 +20,7 @@
   <main>
     <div class="side-nav"><!-- Side Navigation -->
     <ul>
-      <li><!-- Dashboard Icon -->
+      <li><a href="index.html"><!-- Dashboard Icon -->
       <svg version="1.1" id="iconDashboard" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
    viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
         <g id="_x31_0_20_">
@@ -33,7 +34,7 @@
               c-1.7,0-3,1.3-3,3C6,16.7,7.3,18,9,18z M8,14h2v2H8V14z"/>
           </g>
         </g>
-      </svg></li>
+      </svg></a></li>
       <li><a href="#"><!-- Members Icon -->
       <svg version="1.1" id="iconMembers" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
    viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
@@ -110,6 +111,21 @@
       <div class="wrapper">
         <h2>Mobile Users</h2>
         <canvas id="myChart" width="400" height="400" aria-label="Mobile Users preference between phones versus tablets versus desktop" role="img"></canvas>
+        <script>
+          const ctx = document.getElementById("myChart").getContext("2d");
+
+          const mobileUserData = new Chart(ctx, {
+            type: 'doughnut',
+            labels: ["Desktop", "Tablets", "Phones"], // x-axis
+            datasets: [
+            {
+              backgroundColor: ["#7576BE", "#84CD94", "#74B1BE"],
+              data: [70, 20, 10] // y-axis
+            }
+            ]});
+
+          // const mobileUserDoughnutChart = new Chart(ctx).Doughnut(mobileUserData);
+        </script>
       </div>
     </section>
     <section class="social-stats division">
@@ -306,6 +322,6 @@
     </section>
   </main>
 </body>
-<script src="js/Chart.bundle.js"></script>
+
 <script src="js/app.js"></script>
 </html>

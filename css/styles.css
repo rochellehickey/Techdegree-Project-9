@@ -96,6 +96,22 @@ button {
 #iconSettings {
   width: 50px;
   height: auto;
+  padding: 10px;
+  margin: auto 5px;
+  opacity: 0.5;
+}
+
+#iconDashboard:hover,
+#iconMembers:hover,
+#iconVisits:hover,
+#iconSettings:hover {
+  opacity: 1;
+}
+
+#iconDashboard {
+  padding-bottom: 12px;
+  opacity: 1;
+  border-bottom: 3px solid #84CD94;
 }
 
 /* --------------- SOCIAL STATS --------------- */
@@ -178,21 +194,26 @@ button {
 .side-nav {
   background: #4D4A77;
   margin: 0 auto;
-  padding: 12px 10px;
+  padding: 12px 10px 0 10px;
   display: flex;
+}
+
+.side-nav a {
+  display: flex;
+  align-items: center;
 }
 
 .side-nav ul {
   width: 100%;
   padding: 0px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 .side-nav li {
   list-style: none;
-  display: inline-block;
-  flex-direction: row;
-  justify-content: space-between;
 }
 
 .member-profile-picture {

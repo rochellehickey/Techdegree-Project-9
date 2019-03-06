@@ -27,21 +27,26 @@
 .side-nav {
   background: $secondary-color;
   margin: 0 auto;
-  padding: 12px 10px;
+  padding: 12px 10px 0 10px;
   display: flex;
+}
+
+.side-nav a {
+  display: flex;
+  align-items: center;
 }
 
 .side-nav ul {
   width: 100%;
   padding: 0px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 .side-nav li {
   list-style: none;
-  display: inline-block;
-  flex-direction: row;
-  justify-content: space-between;
 }
 
 .member-profile-picture {
