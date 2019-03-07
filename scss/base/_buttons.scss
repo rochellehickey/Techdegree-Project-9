@@ -23,6 +23,18 @@ button {
   margin: 0 5px;
 }
 
+.save,
+.cancel,
+.send {
+  transition: box-shadow .5s ease-in-out;
+}
+
+.save:hover,
+.cancel:hover,
+.send:hover {
+  box-shadow: 0 0 10px $secondary-color;
+}
+
 .cancel {
   background-color: $light-grey;
   border: 1px solid $dark-grey;
@@ -33,6 +45,9 @@ button {
   margin: auto 0 auto auto;
 }
 
-.toggle-group {
-  margin-bottom: 20px;
+.close-button {
+  width: 20%;
+  height: auto;
+  margin: auto 0;
+  border: none;
 }

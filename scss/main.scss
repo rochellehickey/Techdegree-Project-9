@@ -7,6 +7,7 @@
 @import 'base/svg';
 @import 'base/buttons';
 @import 'components/navigation';
+@import 'components/alert-box';
 @import 'components/social-stats';
 @import 'components/new-members';
 @import 'components/recent-activity';
@@ -67,4 +68,8 @@ select {
   padding: 0;
   position: absolute;
   width: 1px;
+}
+
+.hidden {
+  display: none;
 }

@@ -88,9 +88,13 @@
       </div>
     </section>
     <section class="alert-box">
-      <div class="wrapper">
-        <p><strong>Alert</strong> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p></section>
+      <div class="wrapper box">
+        <div class="alert">
+          <p><strong>Alert</strong> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+          <button class="close-button">X</button>
+        </div>
       </div>
+    </section>
     <section class="traffic">
       <div class="wrapper">
         <h2>Traffic</h2>
@@ -110,21 +114,35 @@
     <section class="mobile-users division">
       <div class="wrapper">
         <h2>Mobile Users</h2>
-        <canvas id="myChart" width="400" height="400" aria-label="Mobile Users preference between phones versus tablets versus desktop" role="img"></canvas>
+        <canvas id="mobileUserData" aria-label="Mobile Users preference between phones versus tablets versus desktop"></canvas>
         <script>
-          const ctx = document.getElementById("myChart").getContext("2d");
+          let myChart = document.getElementById("mobileUserData").getContext("2d");
 
-          const mobileUserData = new Chart(ctx, {
-            type: 'doughnut',
-            labels: ["Desktop", "Tablets", "Phones"], // x-axis
-            datasets: [
-            {
-              backgroundColor: ["#7576BE", "#84CD94", "#74B1BE"],
-              data: [70, 20, 10] // y-axis
-            }
-            ]});
+          // Global Options
+          Chart.defaults.global.defaultFontFamily = 'Open Sans';
+          Chart.defaults.global.defaultFontSize = 14;
+          Chart.defaults.global.defaultFontColor = '#707070';
 
-          // const mobileUserDoughnutChart = new Chart(ctx).Doughnut(mobileUserData);
+
+          let mobileUserChart = new Chart(myChart, {
+              type: 'doughnut',
+              data: {
+                labels: ['Desktop', 'Tablets', 'Phones'],
+                datasets: [{
+                  data: [
+                    65,
+                    20,
+                    15
+                  ],
+                  backgroundColor: [
+                    "#7576BE",
+                    "#84CD94",
+                    "#74B1BE"
+                  ],
+                  borderWidth: 0
+                  }]
+              },
+          });
         </script>
       </div>
     </section>
@@ -267,7 +285,7 @@
             <textarea id="msg" name="user_message" placeholder="Message for User"></textarea>
           </div>
           <div class="button">
-            <button type="submit">Send</button>
+            <button type="submit" class="send">Send</button>
           </div>
         </form>
       </div>

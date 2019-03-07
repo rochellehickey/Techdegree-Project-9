@@ -152,6 +152,18 @@ button {
   margin: 0 5px;
 }
 
+.save,
+.cancel,
+.send {
+  transition: box-shadow 0.5s ease-in-out;
+}
+
+.save:hover,
+.cancel:hover,
+.send:hover {
+  box-shadow: 0 0 10px #4D4A77;
+}
+
 .cancel {
   background-color: #B3B2B6;
   border: 1px solid #707070;
@@ -162,8 +174,11 @@ button {
   margin: auto 0 auto auto;
 }
 
-.toggle-group {
-  margin-bottom: 20px;
+.close-button {
+  width: 20%;
+  height: auto;
+  margin: auto 0;
+  border: none;
 }
 
 /* ------------------------------------------- */
@@ -227,6 +242,24 @@ button {
   text-decoration: none;
   color: #FFF;
   display: inline-block;
+}
+
+/* ------------------------------------------- */
+/* ---------------- ALERT BOX ---------------- */
+/* ------------------------------------------- */
+.alert-box p {
+  color: #FFF;
+  margin: 0 auto;
+  font-weight: 300;
+}
+
+.alert {
+  height: auto;
+  background-color: #7576BE;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
 }
 
 .twitter-block,
@@ -1070,6 +1103,10 @@ select {
   padding: 0;
   position: absolute;
   width: 1px;
+}
+
+.hidden {
+  display: none;
 }
 
 /*# sourceMappingURL=styles.css.map */
