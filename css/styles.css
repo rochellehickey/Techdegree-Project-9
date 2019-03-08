@@ -132,19 +132,35 @@ button {
 /* ------------------------------------------- */
 /* ------------------ BUTTONS ---------------- */
 /* ------------------------------------------- */
-button {
-  width: 100%;
-  height: 40px;
-  margin-bottom: 40px;
-  background-color: #7576BE;
-  border-radius: 5px;
-  border: 1px solid #4D4A77;
-}
-
 .button-group {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+.traffic-button-group {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.traffic-button {
+  color: #707070;
+  width: 100px;
+  padding: 5px 15px;
+  margin: 10px 0;
+  border: none;
+  text-transform: none;
+}
+
+.traffic-button:hover,
+.traffic-button:active {
+  color: #FFF;
+  background-color: #84CD94;
+  border: none;
+  border-radius: 20px;
+  text-transform: none;
 }
 
 .save-cancel {
@@ -155,6 +171,12 @@ button {
 .save,
 .cancel,
 .send {
+  width: 100%;
+  height: 40px;
+  margin-bottom: 40px;
+  background-color: #7576BE;
+  border-radius: 5px;
+  border: 1px solid #4D4A77;
   transition: box-shadow 0.5s ease-in-out;
 }
 
@@ -179,6 +201,7 @@ button {
   height: auto;
   margin: auto 0;
   border: none;
+  background-color: #7576BE;
 }
 
 /* ------------------------------------------- */
@@ -260,6 +283,20 @@ button {
   border-radius: 5px;
   display: flex;
   flex-direction: row;
+}
+
+/* ------------------------------------------- */
+/* -------------- MOBILE USERS --------------- */
+/* ------------------------------------------- */
+.mobile-users {
+  margin-bottom: 20px;
+}
+
+/* ------------------------------------------- */
+/* -------------- DAILY TRAFFIC -------------- */
+/* ------------------------------------------- */
+.daily-traffic {
+  margin-bottom: 20px;
 }
 
 .twitter-block,
