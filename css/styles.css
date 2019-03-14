@@ -1142,6 +1142,14 @@ select {
   width: 1px;
 }
 
+.show {
+  visibility: visible;
+}
+
+.hide {
+  visibility: hidden;
+}
+
 .hidden {
   display: none;
 }

@@ -101,44 +101,20 @@
         </div>
       </div>
     </section>
+
     <section class="traffic">
       <div class="wrapper">
         <h2>Traffic</h2>
         <div class="traffic-button-group">
-          <button type="submit" class="traffic-button">Hourly</button>
-          <button type="submit" class="traffic-button">Daily</button>
-          <button type="submit" class="traffic-button">Weekly</button>
-          <button type="submit" class="traffic-button">Monthly</button>
+          <button type="submit" class="traffic-button hourly">Hourly</button>
+          <button type="submit" class="traffic-button daily">Daily</button>
+          <button type="submit" class="traffic-button weekly">Weekly</button>
+          <button type="submit" class="traffic-button monthly">Monthly</button>
         </div>
         <canvas id="trafficData" aria-label="Traffic Data"></canvas>
-        <script>
-          let myTrafficChart = document.getElementById("trafficData").getContext("2d");
-
-          // Global Options
-          Chart.defaults.global.defaultFontFamily = 'Open Sans';
-          Chart.defaults.global.defaultFontSize = 14;
-          Chart.defaults.global.defaultFontColor = '#707070';
-
-          let trafficChart = new Chart(myTrafficChart, {
-              type: 'line',
-              data: {
-                labels: ['16-22', '23-29', '30-5', '6-12', '13-19', '20-26', '27-3', '4-10', '11-17', '18-24', '25-31'],
-                datasets: [{
-                  data: [575, 1250, 1000, 1500, 2000, 1500, 1750, 1250, 1750, 2250, 1750, 2250],
-                  borderColor: '#7576BE',
-                  backgroundColor: "rgba(117,118,190,.3)",
-                  borderWidth: 0,
-                }]
-              },
-              options: {
-                legend: {
-                  display: false
-                }
-              },
-          });
-        </script>
       </div>
     </section>
+
     <section class="daily-traffic division">
       <div class="wrapper">
         <h2>Daily Traffic</h2>
