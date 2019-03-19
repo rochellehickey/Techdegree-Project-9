@@ -197,11 +197,19 @@ button {
 }
 
 .close-button {
-  width: 20%;
+  width: 16px;
   height: auto;
   margin: auto 0;
   border: none;
   background-color: #7576BE;
+}
+
+span.fas.fa-times.close-button {
+  margin: auto 10px;
+}
+
+.fas.fa-times {
+  color: #FFF;
 }
 
 /* ------------------------------------------- */
@@ -268,11 +276,46 @@ button {
 }
 
 /* ------------------------------------------- */
+/* ------------- DASHBOARD HEADING ----------- */
+/* ------------------------------------------- */
+.dashboard-wrapper {
+  background-color: rgba(117, 118, 190, 0.3);
+}
+
+.dashboard-tab {
+  background-color: red;
+}
+
+.searchContainer {
+  width: 100%;
+  max-width: 350px;
+  padding: 0 0.5em;
+  margin-bottom: 10px;
+  background-color: #FFF;
+  display: inline-flex;
+  flex: 1 1 300px;
+  border: 1px solid #B3B2B6;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.searchIcon {
+  padding: 0.5em;
+  color: #7576BE;
+}
+
+.searchBox {
+  border: 0;
+  padding: 0.5em 0.5em 0.5em 0;
+  flex: 1;
+}
+
+/* ------------------------------------------- */
 /* ---------------- ALERT BOX ---------------- */
 /* ------------------------------------------- */
 .alert-box p {
   color: #FFF;
-  margin: 0 auto;
+  margin: 0 10px;
   font-weight: 300;
 }
 
@@ -280,9 +323,11 @@ button {
   height: auto;
   background-color: #7576BE;
   padding: 10px;
+  margin-top: 20px;
   border-radius: 5px;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
 }
 
 /* ------------------------------------------- */
@@ -1152,12 +1197,6 @@ select {
 
 .hidden {
   display: none;
-}
-
-#search {
-  width: 100%;
-  margin: 0 auto 20px auto;
-  border-radius: 5px;
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -1,11 +1,13 @@
 const closeButton = document.querySelector(".close-button");
 const alertBox = document.querySelector(".alert-box");
 const hidden = document.querySelector(".hidden");
+const context = document.querySelector('#trafficData').getContext('2d');
+const myDailyTrafficChart = document.getElementById("dailyTrafficData").getContext("2d");
+const myMobileChart = document.getElementById("mobileUserData").getContext("2d");
 const hourlyButton = document.querySelector(".hourly");
 const dailyButton = document.querySelector(".daily");
 const weeklyButton = document.querySelector(".weekly");
 const monthlyButton = document.querySelector(".monthly");
-const context = document.querySelector('#trafficData').getContext('2d');
 
 
 // ALERT BOX
@@ -15,14 +17,12 @@ closeButton.addEventListener('click', function() {
 });
 
 
-
-// TRAFFIC CHARTS
-
-// Global Options for charts
+// GLOBAL OPTIONS FOR CHARTS
 Chart.defaults.global.defaultFontFamily = 'Open Sans';
 Chart.defaults.global.defaultFontSize = 14;
 Chart.defaults.global.defaultFontColor = '#707070';
 
+// TRAFFIC CHARTS
 const trafficChartHourly = new Chart(context, {
     type: 'line',
     data: {
@@ -37,15 +37,14 @@ const trafficChartHourly = new Chart(context, {
     options: {
       legend: {
         display: false
-      }
-      scales: {
-        xAxes: {
+      },
+       scales: {
+        yAxes: [{
           ticks: {
             beginAtZero: true
-            }
           }
-        }
-    }
+        }]
+      }
     },
 });
 
@@ -63,6 +62,13 @@ const trafficChartDaily = new Chart(context, {
     options: {
       legend: {
         display: false
+      },
+      scales: {
+        yAxes: [{
+          ticks: {
+            beginAtZero: true
+          }
+        }]
       }
     },
 });
@@ -81,6 +87,13 @@ const trafficChartWeekly = new Chart(context, {
     options: {
       legend: {
         display: false
+      },
+      scales: {
+        yAxes: [{
+          ticks: {
+            beginAtZero: true
+          }
+        }]
       }
     },
 });
@@ -99,33 +112,82 @@ const trafficChartMonthly = new Chart(context, {
     options: {
       legend: {
         display: false
+      },
+      scales: {
+        yAxes: [{
+          ticks: {
+            beginAtZero: true
+          }
+        }]
       }
     },
 });
 
 hourlyButton.addEventListener("click", function() {
-    var context1 = document.querySelector('#trafficData').getContext('2d');
-    new Chart(context1).Line(trafficChartHourly);
+    console.log("hourly pressed");
+    var context = document.querySelector('#trafficData').getContext('2d');
+    new Chart(context).trafficChartHourly;
   });
 dailyButton.addEventListener("click", function() {
-    var context2 = document.querySelector('#trafficData').getContext('2d');
-    new Chart(context2).Line(trafficChartDaily);
+    console.log("daily pressed");
+    var context = document.querySelector('#trafficData').getContext('2d');
+    new Chart(context).trafficChartDaily;
   });
 weeklyButton.addEventListener("click", function() {
-    var context3 = document.querySelector('#trafficData').getContext('2d');
-    new Chart(context3).Line(trafficChartWeekly);
+    console.log("weekly pressed");
+    var context = document.querySelector('#trafficData').getContext('2d');
+    new Chart(context).trafficChartWeekly;
   });
 monthlyButton.addEventListener("click", function() {
-    var context4 = document.querySelector('#trafficData').getContext('2d');
-    new Chart(context4).Line(trafficChartMonthly);
+    console.log("monthly pressed");
+    var context = document.querySelector('#trafficData').getContext('2d');
+    new Chart(context).trafficChartMonthly;
   });
 
 
+// DAILY TRAFFIC CHART
+const dailyTrafficChart = new Chart(myDailyTrafficChart, {
+    type: 'bar',
+    data: {
+      labels: ['S', 'M', 'T', 'W', 'T', 'F', 'S'],
+      datasets: [{
+        data: [50, 100, 175, 125, 225, 200, 100],
+        backgroundColor: "#7576BE",
+        borderWidth: 0,
+      }]
+    },
+    options: {
+      legend: {
+        display: false
+      },
+      scales: {
+        yAxes: [{
+          ticks: {
+            beginAtZero: true
+          }
+        }]
+      },
+    },
+});
 
 
-
-
-
+// MOBILE USER CHART
+const mobileUserChart = new Chart(myMobileChart, {
+    type: 'doughnut',
+    data: {
+      labels: ['Desktop', 'Tablets', 'Phones'],
+      datasets: [{
+        data: [65, 20, 15],
+        backgroundColor: ["#7576BE", "#84CD94", "#74B1BE"],
+        borderWidth: 0
+        }]
+    },
+    options: {
+      legend: {
+        position: 'right'
+      }
+    },
+});
 
 
 

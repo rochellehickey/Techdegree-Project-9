@@ -7,6 +7,7 @@
 @import 'base/svg';
 @import 'base/buttons';
 @import 'components/navigation';
+@import 'components/dashboard-heading';
 @import 'components/alert-box';
 @import 'components/mobile-users';
 @import 'components/daily-traffic';
@@ -82,10 +83,4 @@ select {
 
 .hidden {
   display: none;
-}
-
-#search {
-  width: 100%;
-  margin: 0 auto 20px auto;
-  border-radius: 5px;
 }
