@@ -135,6 +135,12 @@ button {
   fill: #7576BE;
 }
 
+@media (min-width: 768px) {
+  .dashboard-active {
+    border-bottom: none;
+    border-left: 3px solid #84CD94;
+  }
+}
 /* ------------------------------------------- */
 /* ------------------ BUTTONS ---------------- */
 /* ------------------------------------------- */
@@ -300,6 +306,17 @@ span.fas.fa-times.close-button {
   display: inline-block;
 }
 
+@media (min-width: 768px) {
+  .side-nav {
+    width: 75px;
+    height: 100%;
+    align-items: flex-start;
+  }
+
+  .side-nav ul {
+    flex-direction: column;
+  }
+}
 /* ------------------------------------------- */
 /* ------------- DASHBOARD HEADING ----------- */
 /* ------------------------------------------- */
@@ -1254,6 +1271,13 @@ select {
 
 .hidden {
   display: none;
+}
+
+@media (min-width: 768px) {
+  main {
+    display: flex;
+    flex-direction: row;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

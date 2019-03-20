@@ -84,3 +84,10 @@ select {
 .hidden {
   display: none;
 }
+
+@media (min-width: 768px) {
+  main {
+    display: flex;
+    flex-direction: row;
+  }
+}

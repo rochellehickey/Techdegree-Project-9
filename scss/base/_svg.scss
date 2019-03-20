@@ -63,3 +63,10 @@
 #googlePlus-icon circle {
   fill: $primary-color;
 }
+
+@media (min-width: 768px) {
+  .dashboard-active {
+    border-bottom: none;
+    border-left: 3px solid $tertiary-color;
+  }
+}
