@@ -107,7 +107,6 @@
         </div>
       </div>
     </section>
-
     <section class="traffic">
       <div class="wrapper">
         <h2>Traffic</h2>
@@ -120,19 +119,20 @@
         <canvas id="trafficData" aria-label="Traffic Data"></canvas>
       </div>
     </section>
-
-    <section class="daily-traffic division">
-      <div class="wrapper">
-        <h2>Daily Traffic</h2>
-        <canvas id="dailyTrafficData" aria-label="Daily Traffic Data"></canvas>
-      </div>
-    </section>
-    <section class="mobile-users division">
-      <div class="wrapper">
-        <h2>Mobile Users</h2>
-        <canvas id="mobileUserData" aria-label="Mobile Users preference between phones versus tablets versus desktop"></canvas>
-      </div>
-    </section>
+    <div class="daily-traffic-and-mobile-user-group">
+      <section class="daily-traffic division">
+        <div class="wrapper">
+          <h2>Daily Traffic</h2>
+          <canvas id="dailyTrafficData" aria-label="Daily Traffic Data"></canvas>
+        </div>
+      </section>
+      <section class="mobile-users division">
+        <div class="wrapper">
+          <h2>Mobile Users</h2>
+          <canvas id="mobileUserData" aria-label="Mobile Users preference between phones versus tablets versus desktop"></canvas>
+        </div>
+      </section>
+    </div>
     <section class="social-stats division">
       <div class="wrapper">
         <h2>Social Stats</h2>
@@ -159,6 +159,7 @@
             <p class="stat-name">Facebook</p>
             <p class="stat-numbers">8,739</p>
           </div>
+        </div>
         </article>
         <article class="googlePlus-block">
           <svg version="1.1" id="googlePlus-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 50 50" style="enable-background:new 0 0 32 32;" xml:space="preserve">
@@ -187,142 +188,146 @@
         </article>
       </div>
     </section>
-    <section class="new-members division">
-      <div class="wrapper">
-        <h2>New Members</h2>
-        <div class="new-member-block">
-          <img src="images/member-1.jpg" class="member-profile-picture" alt="new member profile picture">
-          <div class="member-name-and-contact">
-            <p>Victoria Chambers</p>
-            <p><a href="#">victoria.chambers80@example.com</a></p>
-          </div>
-          <div class="joined">
-            <p class="joined-date">10/15/15</p>
-          </div>
-        </div>
-        <div class="new-member-block">
-          <img src="images/member-2.jpg" class="member-profile-picture" alt="new memeber profile picture">
-          <div class="member-name-and-contact">
-            <p>Dale Byrd</p>
-            <p><a href="#">dale.byrd52@example.com</a></p>
-          </div>
-          <div class="joined">
-            <p class="joined-date">10/15/15</p>
-          </div>
-        </div>
-        <div class="new-member-block">
-          <img src="images/member-3.jpg" class="member-profile-picture" alt="new member profile picture">
-          <div class="member-name-and-contact">
-            <p>Dawn Wood</p>
-            <p><a href="#">dawn.wood16@example.com</a></p>
-          </div>
-          <div class="joined">
-            <p class="joined-date">10/15/15</p>
-          </div>
-        </div>
-        <div class="new-member-block">
-          <img src="images/member-4.jpg" class="member-profile-picture" alt="new member profile picture">
-          <div class="member-name-and-contact">
-            <p>Dan Oliver</p>
-            <p><a href="#">dan.oliver82@example.com</a></p>
-          </div>
-          <div class="joined">
-            <p class="joined-date">10/15/15</p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="recent-activity division">
-      <div class="wrapper">
-        <h2>Recent Activity</h2>
-        <a href="#" class="recent-activity-block">
-          <img src="images/member-1.jpg" class="member-profile-picture" alt="member profile picture">
-          <p class="recent-activity-list">Victoria Chambers commented on <strong>YourApp's SEO Tips</strong></p>
-          <p class="hour-active">4 hours ago</p>
-        </a>
-        <a href="#" class="recent-activity-block">
-          <img src="images/member-2.jpg" class="member-profile-picture" alt="member profile picture">
-          <p class="recent-activity-list">Dale Byrd liked the post <strong>Facebook's Changes for 2016</strong></p>
-          <p class="hour-active">5 hours ago</p>
-        </a>
-        <a href="#" class="recent-activity-block">
-          <img src="images/member-3.jpg" class="member-profile-picture" alt="member profile picture">
-          <p class="recent-activity-list">Dawn Wood commented on <strong>Facebook's Changes for 2016</strong></p>
-          <p class="hour-active">5 hours ago</p>
-        </a>
-        <a href="#" class="recent-activity-block">
-          <img src="images/member-4.jpg" class="member-profile-picture" alt="member profile picture">
-          <p class="recent-activity-list">Dan Oliver posted <strong>YourApp's SEO Tips</strong></p>
-          <p class="hour-active">1 day ago</p>
-        </a>
-      </div>
-    </section>
-    <section class="message-user division">
-      <div class="wrapper">
-        <h2>Message User</h2>
-        <form action="#" method="post">
-          <div>
-            <label for="name" class="visuallyhidden">Search for User</label>
-            <input type="text" id="search-for-user" name="search_for_user" placeholder="Search for User">
-          </div>
-          <div>
-            <label for="msg" class="visuallyhidden">Message for User</label>
-            <textarea id="msg" name="user_message" placeholder="Message for User"></textarea>
-          </div>
-          <div class="button">
-            <button type="submit" class="send">Send</button>
-          </div>
-        </form>
-      </div>
-    </section>
-    <section class="settings division">
-      <div class="wrapper">
-        <h2>Settings</h2>
-        <div class="toggle-group">
-          <p>Send Email Notifications</p>
-          <div class="slider-on-off">
-            <label class="switch-light switch-ios" onclick="">
-              <input type="checkbox">
-              <span>
-                <span>OFF</span>
-                <span>ON</span>
-                <a></a>
-              </span>
-            </label>
-          </div>
-        </div>
-        <div class="toggle-group">
-          <p>Set Profile to Public</p>
-          <div class="slider-on-off">
-            <label class="switch-light switch-ios" onclick="">
-              <input type="checkbox">
-              <span>
-                <span>OFF</span>
-                <span>ON</span>
-                <a></a>
-              </span>
-            </label>
-          </div>
-        </div>
-        <form action="#" method="post">
-          <select name="zone">
-              <option value="1" selected>Select Timezone</option>
-              <option value="2">Pacific (PST)</option>
-              <option value="3">Mountain (MST)</option>
-              <option value="4">Central (CST)</option>
-              <option value="5">Eastern (EST)</option>
-          </select>
-          <div class="button-group">
-            <div class="button save-cancel">
-              <button type="submit" class="save">Save</button>
+    <div class="members-section">
+      <section class="new-members division">
+        <div class="wrapper">
+          <h2>New Members</h2>
+          <div class="new-member-block">
+            <img src="images/member-1.jpg" class="member-profile-picture" alt="new member profile picture">
+            <div class="member-name-and-contact">
+              <p>Victoria Chambers</p>
+              <p><a href="#">victoria.chambers80@example.com</a></p>
             </div>
-            <div class="button save-cancel">
-              <button type="reset" class="cancel">Cancel</button>
+            <div class="joined">
+              <p class="joined-date">10/15/15</p>
             </div>
           </div>
-        </form>
-      </div>
-    </section>
+          <div class="new-member-block">
+            <img src="images/member-2.jpg" class="member-profile-picture" alt="new memeber profile picture">
+            <div class="member-name-and-contact">
+              <p>Dale Byrd</p>
+              <p><a href="#">dale.byrd52@example.com</a></p>
+            </div>
+            <div class="joined">
+              <p class="joined-date">10/15/15</p>
+            </div>
+          </div>
+          <div class="new-member-block">
+            <img src="images/member-3.jpg" class="member-profile-picture" alt="new member profile picture">
+            <div class="member-name-and-contact">
+              <p>Dawn Wood</p>
+              <p><a href="#">dawn.wood16@example.com</a></p>
+            </div>
+            <div class="joined">
+              <p class="joined-date">10/15/15</p>
+            </div>
+          </div>
+          <div class="new-member-block">
+            <img src="images/member-4.jpg" class="member-profile-picture" alt="new member profile picture">
+            <div class="member-name-and-contact">
+              <p>Dan Oliver</p>
+              <p><a href="#">dan.oliver82@example.com</a></p>
+            </div>
+            <div class="joined">
+              <p class="joined-date">10/15/15</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="recent-activity division">
+        <div class="wrapper">
+          <h2>Recent Activity</h2>
+          <a href="#" class="recent-activity-block">
+            <img src="images/member-1.jpg" class="member-profile-picture" alt="member profile picture">
+            <p class="recent-activity-list">Victoria Chambers commented on <strong>YourApp's SEO Tips</strong></p>
+            <p class="hour-active">4 hours ago</p>
+          </a>
+          <a href="#" class="recent-activity-block">
+            <img src="images/member-2.jpg" class="member-profile-picture" alt="member profile picture">
+            <p class="recent-activity-list">Dale Byrd liked the post <strong>Facebook's Changes for 2016</strong></p>
+            <p class="hour-active">5 hours ago</p>
+          </a>
+          <a href="#" class="recent-activity-block">
+            <img src="images/member-3.jpg" class="member-profile-picture" alt="member profile picture">
+            <p class="recent-activity-list">Dawn Wood commented on <strong>Facebook's Changes for 2016</strong></p>
+            <p class="hour-active">5 hours ago</p>
+          </a>
+          <a href="#" class="recent-activity-block">
+            <img src="images/member-4.jpg" class="member-profile-picture" alt="member profile picture">
+            <p class="recent-activity-list">Dan Oliver posted <strong>YourApp's SEO Tips</strong></p>
+            <p class="hour-active">1 day ago</p>
+          </a>
+        </div>
+      </section>
+    </div>
+    <div class="message-setting-section">
+      <section class="message-user division">
+        <div class="wrapper">
+          <h2>Message User</h2>
+          <form action="#" method="post">
+            <div>
+              <label for="name" class="visuallyhidden">Search for User</label>
+              <input type="text" id="search-for-user" name="search_for_user" placeholder="Search for User">
+            </div>
+            <div>
+              <label for="msg" class="visuallyhidden">Message for User</label>
+              <textarea id="msg" name="user_message" placeholder="Message for User"></textarea>
+            </div>
+            <div class="button">
+              <button type="submit" class="send">Send</button>
+            </div>
+          </form>
+        </div>
+      </section>
+      <section class="settings division">
+        <div class="wrapper">
+          <h2>Settings</h2>
+          <div class="toggle-group">
+            <p>Send Email Notifications</p>
+            <div class="slider-on-off">
+              <label class="switch-light switch-ios" onclick="">
+                <input type="checkbox">
+                <span>
+                  <span>OFF</span>
+                  <span>ON</span>
+                  <a></a>
+                </span>
+              </label>
+            </div>
+          </div>
+          <div class="toggle-group">
+            <p>Set Profile to Public</p>
+            <div class="slider-on-off">
+              <label class="switch-light switch-ios" onclick="">
+                <input type="checkbox">
+                <span>
+                  <span>OFF</span>
+                  <span>ON</span>
+                  <a></a>
+                </span>
+              </label>
+            </div>
+          </div>
+          <form action="#" method="post">
+            <select name="zone">
+                <option value="1" selected>Select Timezone</option>
+                <option value="2">Pacific (PST)</option>
+                <option value="3">Mountain (MST)</option>
+                <option value="4">Central (CST)</option>
+                <option value="5">Eastern (EST)</option>
+            </select>
+            <div class="button-group">
+              <div class="button save-cancel">
+                <button type="submit" class="save">Save</button>
+              </div>
+              <div class="button save-cancel">
+                <button type="reset" class="cancel">Cancel</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+    </div>
     </div>
   </main>
 </body>

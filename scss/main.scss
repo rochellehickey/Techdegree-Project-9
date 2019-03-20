@@ -90,4 +90,13 @@ select {
     display: flex;
     flex-direction: row;
   }
+  .main-wrapper {
+    width: 100%;
+  }
+  .daily-traffic-and-mobile-user-group,
+  .members-section,
+  .message-setting-section {
+    display: flex;
+    flex-direction: row;
+  }
 }
