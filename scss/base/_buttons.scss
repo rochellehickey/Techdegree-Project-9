@@ -3,6 +3,23 @@
 /* ------------------------------------------- */
 
 
+
+.close-button {
+  width: 16px;
+  height: auto;
+  margin: auto 0;
+  border: none;
+  background-color: $primary-color;
+}
+
+span.fas.fa-times.close-button {
+  margin: auto 10px;
+}
+
+.fas.fa-times {
+  color: $white;
+}
+
 .button-group {
   display: flex;
   flex-direction: row;
@@ -25,12 +42,31 @@
   text-transform: none;
 }
 
-.traffic-button:hover,
-.traffic-button:active {
+.traffic-button:hover {
   color: $white;
   background-color: $tertiary-color;
   border: none;
   border-radius: 20px;
+  text-transform: none;
+}
+
+.traffic-button-active {
+  color: $white;
+  background-color: $tertiary-color;
+  width: 100px;
+  padding: 5px 15px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 20px;
+  text-transform: none;
+}
+
+.traffic-button-inactive {
+  color: $dark-grey;
+  width: 100px;
+  padding: 5px 15px;
+  margin: 10px 0;
+  border: none;
   text-transform: none;
 }
 
@@ -65,20 +101,4 @@
 .slider-on-off {
   width: 100px;
   margin: auto 0 auto auto;
-}
-
-.close-button {
-  width: 16px;
-  height: auto;
-  margin: auto 0;
-  border: none;
-  background-color: $primary-color;
-}
-
-span.fas.fa-times.close-button {
-  margin: auto 10px;
-}
-
-.fas.fa-times {
-  color: $white;
 }

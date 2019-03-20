@@ -35,10 +35,16 @@
   opacity: 1;
 }
 
-#iconDashboard {
+.dashboard-active {
   padding-bottom: 12px;
-  opacity: 1;
+  opacity: 1 !important;
   border-bottom: 3px solid $tertiary-color;
+}
+
+.dashboard-inactive {
+  padding-bottom: 12px;
+  opacity: .5;
+  border-bottom: none;
 }
 
 

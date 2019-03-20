@@ -1,3 +1,7 @@
+const iconDashboard = document.getElementById("iconDashboard");
+const iconMembers = document.getElementById("iconMembers");
+const iconVisits = document.getElementById("iconVisits");
+const iconSettings = document.getElementById("iconSettings");
 const closeButton = document.querySelector(".close-button");
 const alertBox = document.querySelector(".alert-box");
 const hidden = document.querySelector(".hidden");
@@ -10,10 +14,71 @@ const weeklyButton = document.querySelector(".weekly");
 const monthlyButton = document.querySelector(".monthly");
 
 
+// NAVIGATION
+// Keep button appearing active after button has been clicked
+iconDashboard.addEventListener('click', function() {
+  iconDashboard.className = "dashboard-active";
+  iconMembers.className = "dashboard-inactive";
+  iconVisits.className = "dashboard-inactive";
+  iconSettings.className = "dashboard-inactive";
+});
+
+iconMembers.addEventListener('click', function() {
+  iconDashboard.className = "dashboard-inactive";
+  iconMembers.className = "dashboard-active";
+  iconVisits.className = "dashboard-inactive";
+  iconSettings.className = "dashboard-inactive";
+});
+
+iconVisits.addEventListener('click', function() {
+  iconDashboard.className = "dashboard-inactive";
+  iconMembers.className = "dashboard-inactive";
+  iconVisits.className = "dashboard-active";
+  iconSettings.className = "dashboard-inactive";
+});
+
+iconSettings.addEventListener('click', function() {
+  iconDashboard.className = "dashboard-inactive";
+  iconMembers.className = "dashboard-inactive";
+  iconVisits.className = "dashboard-inactive";
+  iconSettings.className = "dashboard-active";
+});
+
 // ALERT BOX
 closeButton.addEventListener('click', function() {
   // adds/toggles class of hidden to alert-box which removes it from the DOM
   alertBox.classList.toggle('hidden');
+});
+
+// TRAFFIC CHART BUTTONS
+// Keep button appearing active after button has been clicked
+
+hourlyButton.addEventListener('click', function() {
+  hourlyButton.className = "traffic-button-active";
+  dailyButton.className = "traffic-button-inactive";
+  weeklyButton.className = "traffic-button-inactive";
+  monthlyButton.className = "traffic-button-inactive";
+});
+
+dailyButton.addEventListener('click', function() {
+  hourlyButton.className = "traffic-button-inactive";
+  dailyButton.className = "traffic-button-active";
+  weeklyButton.className = "traffic-button-inactive";
+  monthlyButton.className = "traffic-button-inactive";
+});
+
+weeklyButton.addEventListener('click', function() {
+  hourlyButton.className = "traffic-button-inactive";
+  dailyButton.className = "traffic-button-inactive";
+  weeklyButton.className = "traffic-button-active";
+  monthlyButton.className = "traffic-button-inactive";
+});
+
+monthlyButton.addEventListener('click', function() {
+  hourlyButton.className = "traffic-button-inactive";
+  dailyButton.className = "traffic-button-inactive";
+  weeklyButton.className = "traffic-button-inactive";
+  monthlyButton.className = "traffic-button-active";
 });
 
 
