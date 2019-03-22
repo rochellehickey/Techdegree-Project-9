@@ -409,16 +409,31 @@ span.fas.fa-times.close-button {
 /* -------------- MOBILE USERS --------------- */
 /* ------------------------------------------- */
 .mobile-users {
-  margin-bottom: 20px;
+  padding-bottom: 20px;
 }
 
+@media (min-width: 768px) {
+  .mobile-users {
+    width: 50%;
+  }
+}
 /* ------------------------------------------- */
 /* -------------- DAILY TRAFFIC -------------- */
 /* ------------------------------------------- */
-.daily-traffic {
-  margin-bottom: 20px;
+.traffic {
+  padding-bottom: 20px;
 }
 
+.daily-traffic {
+  padding-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+  .daily-traffic {
+    width: 50%;
+    border-right: 1px solid #B3B2B6;
+  }
+}
 .twitter-block,
 .facebook-block,
 .googlePlus-block {
@@ -460,11 +475,12 @@ span.fas.fa-times.close-button {
 }
 
 @media (min-width: 768px) {
-  .social-stats-group {
+  .stats-group {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
   }
 
   .twitter-block,
@@ -1369,7 +1385,7 @@ select {
 .message-setting-section {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
   }
 }
 

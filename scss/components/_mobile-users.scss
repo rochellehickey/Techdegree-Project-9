@@ -3,5 +3,11 @@
 /* ------------------------------------------- */
 
 .mobile-users {
-  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+  .mobile-users {
+    width: 50%;
+  }
 }

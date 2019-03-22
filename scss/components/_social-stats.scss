@@ -39,11 +39,12 @@
 }
 
 @media (min-width: 768px) {
-  .social-stats-group {
+  .stats-group {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
   }
   .twitter-block,
   .facebook-block,
