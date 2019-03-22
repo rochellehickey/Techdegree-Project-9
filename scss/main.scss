@@ -89,14 +89,16 @@ select {
   main {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
   }
   .main-wrapper {
-    width: 100%;
+    flex-direction: column;
   }
   .daily-traffic-and-mobile-user-group,
   .members-section,
   .message-setting-section {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
   }
 }

@@ -362,6 +362,7 @@ span.fas.fa-times.close-button {
 
 @media (min-width: 540px) {
   .dashboard-wrapper {
+    width: 100%;
     background-color: rgba(117, 118, 190, 0.3);
     display: flex;
     flex-direction: row;
@@ -513,6 +514,39 @@ span.fas.fa-times.close-button {
   margin: 20px 0 0 0;
 }
 
+@media (min-width: 768px) {
+  .new-members {
+    width: 50%;
+    border-right: 1px solid #B3B2B6;
+  }
+
+  .new-member-block {
+    flex-direction: column;
+  }
+
+  .member-name-and-contact {
+    margin-top: 0;
+  }
+
+  .picture-and-contact-info {
+    display: inline-flex;
+    flex-direction: row;
+  }
+
+  .picture-and-contact-info img {
+    width: 44px;
+    height: 44px;
+  }
+
+  .joined {
+    margin-left: 54px;
+    margin-top: 10px;
+  }
+
+  .joined-date {
+    margin: 0;
+  }
+}
 /* ------------------------------------------- */
 /* ------------- RECENT ACTIVITY ------------- */
 /* ------------------------------------------- */
@@ -544,6 +578,25 @@ span.fas.fa-times.close-button {
   margin: 0;
 }
 
+@media (min-width: 768px) {
+  .recent-activity {
+    width: 50%;
+  }
+
+  .recent-activity-block {
+    flex-direction: row;
+  }
+
+  .recent-activity-list {
+    width: 80%;
+    margin-top: 0;
+  }
+
+  .hour-active {
+    margin-top: 10px;
+    margin-left: 54px;
+  }
+}
 /* ------------------------------------------- */
 /* --------------- MESSAGE USER -------------- */
 /* ------------------------------------------- */
@@ -567,6 +620,12 @@ span.fas.fa-times.close-button {
   background-color: #FBFBFB;
 }
 
+@media (min-width: 768px) {
+  .message-user {
+    width: 50%;
+    border-right: 1px solid #B3B2B6;
+  }
+}
 /* ------------------------------------------- */
 /* ----------------- SETTINGS ---------------- */
 /* ------------------------------------------- */
@@ -576,6 +635,11 @@ span.fas.fa-times.close-button {
   align-items: center;
 }
 
+@media (min-width: 768px) {
+  .settings {
+    width: 50%;
+  }
+}
 /*
 * CSS TOGGLE SWITCH
 *
@@ -1293,10 +1357,11 @@ select {
   main {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
   }
 
   .main-wrapper {
-    width: 100%;
+    flex-direction: column;
   }
 
   .daily-traffic-and-mobile-user-group,
@@ -1304,6 +1369,7 @@ select {
 .message-setting-section {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
   }
 }
 

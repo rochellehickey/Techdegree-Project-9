@@ -38,3 +38,31 @@
   margin: 20px 0 0 0;
 }
 
+@media (min-width: 768px) {
+  .new-members {
+    width: 50%;
+    border-right: 1px solid $light-grey;
+  }
+  .new-member-block {
+    flex-direction: column;
+  }
+  .member-name-and-contact {
+    margin-top: 0;
+  }
+  .picture-and-contact-info {
+    display: inline-flex;
+    flex-direction: row;
+  }
+  .picture-and-contact-info img {
+    width: 44px;
+    height: 44px;
+  }
+  .joined {
+    margin-left: 54px;
+    margin-top: 10px;
+  }
+  .joined-date {
+    margin: 0;
+  }
+}
+

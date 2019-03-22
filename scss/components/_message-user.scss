@@ -22,3 +22,10 @@
   border: 1px solid $light-grey;
   background-color: $fields;
 }
+
+@media (min-width: 768px) {
+  .message-user {
+    width: 50%;
+    border-right: 1px solid $light-grey;
+  }
+}

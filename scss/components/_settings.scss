@@ -7,3 +7,9 @@
   flex-direction: row;
   align-items: center;
 }
+
+@media (min-width: 768px) {
+  .settings {
+    width: 50%;
+  }
+}
