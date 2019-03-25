@@ -43,6 +43,9 @@
     width: 50%;
     border-right: 1px solid $light-grey;
   }
+  .new-members .wrapper {
+    width: 80%;
+  }
   .new-member-block {
     flex-direction: column;
   }
@@ -63,6 +66,16 @@
   }
   .joined-date {
     margin: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .new-member-block {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  p.hour-active {
+    margin-top: 0;
   }
 }
 

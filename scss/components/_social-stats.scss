@@ -46,6 +46,9 @@
     align-items: center;
     justify-content: space-evenly;
   }
+  .stats-group:last-child {
+    margin-bottom: 40px;
+  }
   .twitter-block,
   .facebook-block,
   .googlePlus-block {
@@ -55,6 +58,11 @@
   }
 }
 
+@media (min-width: 1024px) {
+  .stats-group {
+    justify-content: space-between;
+  }
+}
 
 
 

@@ -18,7 +18,8 @@ input,
 ul,
 li,
 form,
-button {
+button,
+span {
   font-family: "Open Sans", sans-serif;
 }
 
@@ -243,6 +244,14 @@ span.fas.fa-times.close-button {
   margin: auto 0 auto auto;
 }
 
+@media (min-width: 768px) {
+  .traffic-button-group {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+}
 /* ------------------------------------------- */
 /* --------------- NAVIGATION ---------------- */
 /* ------------------------------------------- */
@@ -254,7 +263,7 @@ span.fas.fa-times.close-button {
   padding: 12px 10px;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -262,10 +271,25 @@ span.fas.fa-times.close-button {
   margin: 0 auto;
 }
 
-.member-profile-nav {
+.member-profile-and-notifications {
   display: flex;
   flex-direction: row;
   align-items: center;
+}
+
+.member-profile-nav {
+  border-left: 1px solid #B3B2B6;
+  padding-left: 20px;
+  margin-left: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.yourApp {
+  font-family: "Open Sans", sans-serif;
+  text-decoration: none;
+  color: #FFF;
 }
 
 .side-nav {
@@ -291,13 +315,6 @@ span.fas.fa-times.close-button {
 
 .side-nav li {
   list-style: none;
-}
-
-.member-profile-picture {
-  width: 30px;
-  height: auto;
-  display: inline-block;
-  margin-right: 10px;
 }
 
 .profileName {
@@ -416,6 +433,10 @@ span.fas.fa-times.close-button {
   .mobile-users {
     width: 50%;
   }
+
+  .mobile-users .wrapper {
+    width: 80%;
+  }
 }
 /* ------------------------------------------- */
 /* -------------- DAILY TRAFFIC -------------- */
@@ -432,6 +453,10 @@ span.fas.fa-times.close-button {
   .daily-traffic {
     width: 50%;
     border-right: 1px solid #B3B2B6;
+  }
+
+  .daily-traffic .wrapper {
+    width: 80%;
   }
 }
 .twitter-block,
@@ -483,12 +508,21 @@ span.fas.fa-times.close-button {
     justify-content: space-evenly;
   }
 
+  .stats-group:last-child {
+    margin-bottom: 40px;
+  }
+
   .twitter-block,
 .facebook-block,
 .googlePlus-block {
     margin: 0 0 20px 0;
     display: inline-flex;
     max-width: 300px;
+  }
+}
+@media (min-width: 1024px) {
+  .stats-group {
+    justify-content: space-between;
   }
 }
 /* ------------------------------------------- */
@@ -536,6 +570,10 @@ span.fas.fa-times.close-button {
     border-right: 1px solid #B3B2B6;
   }
 
+  .new-members .wrapper {
+    width: 80%;
+  }
+
   .new-member-block {
     flex-direction: column;
   }
@@ -561,6 +599,16 @@ span.fas.fa-times.close-button {
 
   .joined-date {
     margin: 0;
+  }
+}
+@media (min-width: 1024px) {
+  .new-member-block {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  p.hour-active {
+    margin-top: 0;
   }
 }
 /* ------------------------------------------- */
@@ -599,6 +647,10 @@ span.fas.fa-times.close-button {
     width: 50%;
   }
 
+  .recent-activity .wrapper {
+    width: 80%;
+  }
+
   .recent-activity-block {
     flex-direction: row;
   }
@@ -616,9 +668,16 @@ span.fas.fa-times.close-button {
 /* ------------------------------------------- */
 /* --------------- MESSAGE USER -------------- */
 /* ------------------------------------------- */
+.message-user .wrapper {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+}
+
 #search-for-user {
   width: 100%;
   height: 40px;
+  display: flex;
   padding: 5px 10px;
   margin: 0 0 10px 0;
   border-radius: 5px;
@@ -629,6 +688,7 @@ span.fas.fa-times.close-button {
 #msg {
   width: 100%;
   height: 100px;
+  display: flex;
   padding: 5px 10px;
   margin: 0 0 10px 0;
   border-radius: 5px;
@@ -641,10 +701,20 @@ span.fas.fa-times.close-button {
     width: 50%;
     border-right: 1px solid #B3B2B6;
   }
+
+  .message-user .wrapper {
+    width: 80%;
+  }
 }
 /* ------------------------------------------- */
 /* ----------------- SETTINGS ---------------- */
 /* ------------------------------------------- */
+.settings .wrapper {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+}
+
 .toggle-group {
   display: flex;
   flex-direction: row;
@@ -654,6 +724,10 @@ span.fas.fa-times.close-button {
 @media (min-width: 768px) {
   .settings {
     width: 50%;
+  }
+
+  .settings .wrapper {
+    width: 80%;
   }
 }
 /*
@@ -1327,14 +1401,9 @@ select {
 
 .member-profile-picture {
   width: 44px;
-  height: auto;
+  height: 44px;
+  display: inline-block;
   margin-right: 10px;
-}
-
-.yourApp {
-  font-family: "Open Sans", sans-serif;
-  text-decoration: none;
-  color: #FFF;
 }
 
 .wrapper {
@@ -1377,12 +1446,14 @@ select {
   }
 
   .main-wrapper {
+    width: 100%;
     flex-direction: column;
   }
 
   .daily-traffic-and-mobile-user-group,
 .members-section,
 .message-setting-section {
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;

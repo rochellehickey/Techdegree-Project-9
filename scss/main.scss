@@ -43,14 +43,9 @@ select {
 
 .member-profile-picture {
   width: 44px;
-  height: auto;
+  height: 44px;
+  display: inline-block;
   margin-right: 10px;
-}
-
-.yourApp {
-  font-family: $primary-font;
-  text-decoration: none;
-  color: $white;
 }
 
 .wrapper {
@@ -92,11 +87,13 @@ select {
     flex-wrap: wrap;
   }
   .main-wrapper {
+    width: 100%;
     flex-direction: column;
   }
   .daily-traffic-and-mobile-user-group,
   .members-section,
   .message-setting-section {
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
