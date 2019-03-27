@@ -26,8 +26,13 @@
   box-sizing: border-box;
 }
 
+html {
+  height: 100%;
+}
+
 body {
   margin: 0 auto;
+  height: 100%;
 }
 
 img {
@@ -85,9 +90,10 @@ select {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    align-items: stretch;
   }
   .main-wrapper {
-    width: 100%;
+    width: calc(100% - 80px);
     flex-direction: column;
   }
   .daily-traffic-and-mobile-user-group,

@@ -9,17 +9,22 @@
 
 .dashboard-wrapper {
   width: 100%;
+  margin: 0 auto;
   background-color: $white;
 }
 
 .dashboard-tab {
   width: 100%;
-  padding: 10px;
+  padding: 20px;
   background-color: $white;
 }
 
+.search {
+  margin: 0 auto;
+}
+
 .searchContainer {
-  width: 93%;
+  width: 90%;
   padding: 0 0.5em;
   margin: 0 10px;
   background-color: $white;
@@ -42,7 +47,7 @@
   flex: 1;
 }
 
-@media (min-width: 540px) {
+@media (min-width: 768px) {
   .dashboard-wrapper {
     width: 100%;
     background-color: $primary-transparent;
