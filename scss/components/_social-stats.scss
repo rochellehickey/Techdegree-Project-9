@@ -22,6 +22,10 @@
   flex-align: left;
 }
 
+.stats-group {
+  padding-bottom: 40px;
+}
+
 .stat-name {
   line-height: 1.1;
   font-size: $social-stat-title;
@@ -60,7 +64,13 @@
 
 @media (min-width: 1024px) {
   .stats-group {
-    justify-content: space-between;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .twitter-block,
+  .facebook-block,
+  .googlePlus-block {
+    max-width: 325px;
   }
 }
 
