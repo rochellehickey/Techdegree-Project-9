@@ -390,13 +390,15 @@ span.fas.fa-times.close-button {
 }
 
 .search {
+  width: 100%;
+  padding: 0 20px;
   margin: 0 auto;
 }
 
 .searchContainer {
-  width: 90%;
+  width: 100%;
   padding: 0 0.5em;
-  margin: 0 10px;
+  margin: 0;
   background-color: #FFF;
   display: inline-flex;
   align-items: center;
