@@ -191,7 +191,8 @@ const trafficChartMonthly = new Chart(context, {
 hourlyButton.addEventListener("click", function() {
     console.log("hourly pressed");
     var context = document.querySelector('#trafficData').getContext('2d');
-    new Chart(context).trafficChartHourly;
+    new Chart(context).Line(trafficChartHourly);
+    console.log("where is my chart?!");
   });
 dailyButton.addEventListener("click", function() {
     console.log("daily pressed");
