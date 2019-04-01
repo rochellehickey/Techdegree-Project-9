@@ -18,10 +18,23 @@
   margin: 0 auto;
 }
 
+.yourApp {
+  font-family: $primary-font;
+  text-decoration: none;
+  color: $white;
+}
+
 .member-profile-and-notifications {
   display: flex;
   flex-direction: row;
   align-items: center;
+}
+
+.fas.fa-circle {
+  padding-bottom: 30px;
+  margin-left: -5px;
+  color: $tertiary-color;
+  font-size: 10px;
 }
 
 .member-profile-nav {
@@ -33,11 +46,60 @@
   align-items: center;
 }
 
-.yourApp {
-  font-family: $primary-font;
-  text-decoration: none;
-  color: $white;
+
+
+
+
+
+
+
+
+
+/* DROPDOWN MENU */
+
+li {
+ display: block;
+ transition-duration: 0.5s;
 }
+
+li:hover {
+  cursor: pointer;
+}
+
+ul li ul {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  transition: all 0.5s ease;
+  margin-top: 1rem;
+  left: 0;
+  display: none;
+}
+
+ul li:hover > ul,
+ul li ul:hover {
+  visibility: visible;
+  opacity: 1;
+  display: block;
+}
+
+ul li ul li {
+  clear: both;
+  width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .side-nav-group {
   width: 100%;

@@ -50,38 +50,6 @@ closeButton.addEventListener('click', function() {
   alertBox.classList.toggle('hidden');
 });
 
-// TRAFFIC CHART BUTTONS
-// Keep button appearing active after button has been clicked
-
-hourlyButton.addEventListener('click', function() {
-  hourlyButton.className = "traffic-button-active";
-  dailyButton.className = "traffic-button-inactive";
-  weeklyButton.className = "traffic-button-inactive";
-  monthlyButton.className = "traffic-button-inactive";
-});
-
-dailyButton.addEventListener('click', function() {
-  hourlyButton.className = "traffic-button-inactive";
-  dailyButton.className = "traffic-button-active";
-  weeklyButton.className = "traffic-button-inactive";
-  monthlyButton.className = "traffic-button-inactive";
-});
-
-weeklyButton.addEventListener('click', function() {
-  hourlyButton.className = "traffic-button-inactive";
-  dailyButton.className = "traffic-button-inactive";
-  weeklyButton.className = "traffic-button-active";
-  monthlyButton.className = "traffic-button-inactive";
-});
-
-monthlyButton.addEventListener('click', function() {
-  hourlyButton.className = "traffic-button-inactive";
-  dailyButton.className = "traffic-button-inactive";
-  weeklyButton.className = "traffic-button-inactive";
-  monthlyButton.className = "traffic-button-active";
-});
-
-
 // GLOBAL OPTIONS FOR CHARTS
 Chart.defaults.global.defaultFontFamily = 'Open Sans';
 Chart.defaults.global.defaultFontSize = 14;
@@ -188,27 +156,63 @@ const trafficChartMonthly = new Chart(context, {
     },
 });
 
-hourlyButton.addEventListener("click", function() {
-    console.log("hourly pressed");
-    var context = document.querySelector('#trafficData').getContext('2d');
-    new Chart(context).Line(trafficChartHourly);
-    console.log("where is my chart?!");
+// TRAFFIC CHART BUTTONS
+
+hourlyButton.addEventListener('click', function() {
+  // Keep button appearing active after button has been clicked
+  hourlyButton.className = "traffic-button-active";
+  dailyButton.className = "traffic-button-inactive";
+  weeklyButton.className = "traffic-button-inactive";
+  monthlyButton.className = "traffic-button-inactive";
+  // Change chart to match button pressed
+  trafficChartHourly.render({
+    duration: 800,
+    lazy: false,
+    easing: 'easeOutBounce'
   });
-dailyButton.addEventListener("click", function() {
-    console.log("daily pressed");
-    var context = document.querySelector('#trafficData').getContext('2d');
-    new Chart(context).trafficChartDaily;
+});
+
+dailyButton.addEventListener('click', function() {
+  // Keep button appearing active after button has been clicked
+  hourlyButton.className = "traffic-button-inactive";
+  dailyButton.className = "traffic-button-active";
+  weeklyButton.className = "traffic-button-inactive";
+  monthlyButton.className = "traffic-button-inactive";
+  // Change chart to match button pressed
+  trafficChartDaily.render({
+    duration: 800,
+    lazy: false,
+    easing: 'easeOutBounce'
   });
-weeklyButton.addEventListener("click", function() {
-    console.log("weekly pressed");
-    var context = document.querySelector('#trafficData').getContext('2d');
-    new Chart(context).trafficChartWeekly;
+});
+
+weeklyButton.addEventListener('click', function() {
+  // Keep button appearing active after button has been clicked
+  hourlyButton.className = "traffic-button-inactive";
+  dailyButton.className = "traffic-button-inactive";
+  weeklyButton.className = "traffic-button-active";
+  monthlyButton.className = "traffic-button-inactive";
+  // Change chart to match button pressed
+  trafficChartWeekly.render({
+    duration: 800,
+    lazy: false,
+    easing: 'easeOutBounce'
   });
-monthlyButton.addEventListener("click", function() {
-    console.log("monthly pressed");
-    var context = document.querySelector('#trafficData').getContext('2d');
-    new Chart(context).trafficChartMonthly;
+});
+
+monthlyButton.addEventListener('click', function() {
+  // Keep button appearing active after button has been clicked
+  hourlyButton.className = "traffic-button-inactive";
+  dailyButton.className = "traffic-button-inactive";
+  weeklyButton.className = "traffic-button-inactive";
+  monthlyButton.className = "traffic-button-active";
+  // Change chart to match button pressed
+  trafficChartMonthly.render({
+    duration: 800,
+    lazy: false,
+    easing: 'easeOutBounce'
   });
+});
 
 
 // DAILY TRAFFIC CHART

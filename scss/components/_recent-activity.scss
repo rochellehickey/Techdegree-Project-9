@@ -46,6 +46,11 @@
   }
   .hour-active {
     margin-top: 10px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hour-active {
     margin-left: 54px;
   }
 }

@@ -258,10 +258,23 @@ span.fas.fa-times.close-button {
   margin: 0 auto;
 }
 
+.yourApp {
+  font-family: "Open Sans", sans-serif;
+  text-decoration: none;
+  color: #FFF;
+}
+
 .member-profile-and-notifications {
   display: flex;
   flex-direction: row;
   align-items: center;
+}
+
+.fas.fa-circle {
+  padding-bottom: 30px;
+  margin-left: -5px;
+  color: #84CD94;
+  font-size: 10px;
 }
 
 .member-profile-nav {
@@ -273,10 +286,36 @@ span.fas.fa-times.close-button {
   align-items: center;
 }
 
-.yourApp {
-  font-family: "Open Sans", sans-serif;
-  text-decoration: none;
-  color: #FFF;
+/* DROPDOWN MENU */
+li {
+  display: block;
+  transition-duration: 0.5s;
+}
+
+li:hover {
+  cursor: pointer;
+}
+
+ul li ul {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  transition: all 0.5s ease;
+  margin-top: 1rem;
+  left: 0;
+  display: none;
+}
+
+ul li:hover > ul,
+ul li ul:hover {
+  visibility: visible;
+  opacity: 1;
+  display: block;
+}
+
+ul li ul li {
+  clear: both;
+  width: 100%;
 }
 
 .side-nav-group {
@@ -711,6 +750,10 @@ span.fas.fa-times.close-button {
 
   .hour-active {
     margin-top: 10px;
+  }
+}
+@media (min-width: 1024px) {
+  .hour-active {
     margin-left: 54px;
   }
 }
