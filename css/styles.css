@@ -89,6 +89,7 @@ button {
 .notificationBell {
   width: 30px;
   height: auto;
+  border-radius: 0;
 }
 
 #iconDashboard,
@@ -295,6 +296,7 @@ span.fas.fa-times.close-button {
   border-left: 20px solid transparent;
   border-right: 20px solid transparent;
   border-bottom: 5px solid #FBFBFB;
+  visibility: hidden;
 }
 
 .fa-angle-double-right:before {
@@ -309,6 +311,11 @@ span.fas.fa-times.close-button {
 .dropdown {
   position: relative;
   display: inline-block;
+  transition: transform 0.5s cubic-bezier(0.41, 1.46, 0.53, -0.56);
+}
+
+.dropdown:hover {
+  transform: rotate(20deg);
 }
 
 .dropdown-content {
@@ -317,6 +324,7 @@ span.fas.fa-times.close-button {
   background-color: #FBFBFB;
   min-width: 180px;
   z-index: 1;
+  visibility: hidden;
 }
 
 .dropdown-content a {

@@ -1,3 +1,6 @@
+const notificationBell = document.querySelector(".dropdown");
+const navArrow = document.querySelector(".arrow-up");
+const navDropDownContent = document.querySelector(".dropdown-content");
 const iconDashboard = document.getElementById("iconDashboard");
 const iconMembers = document.getElementById("iconMembers");
 const iconVisits = document.getElementById("iconVisits");
@@ -15,7 +18,16 @@ const monthlyButton = document.querySelector(".monthly");
 
 
 // NAVIGATION
-// Keep button appearing active after button has been clicked
+// Open and close dropdown menu when notification bell icon has been clicked
+notificationBell.addEventListener('click', function() {
+  navArrow.classList.toggle('show');
+  navDropDownContent.classList.toggle('show');
+});
+
+
+
+
+// Keep secondary nav button appearing active after button has been clicked
 iconDashboard.addEventListener('click', function() {
   iconDashboard.className = "dashboard-active";
   iconMembers.className = "dashboard-inactive";

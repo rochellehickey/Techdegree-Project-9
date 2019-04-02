@@ -58,6 +58,7 @@
   border-left: 20px solid transparent;
   border-right: 20px solid transparent;
   border-bottom: 5px solid $fields;
+  visibility: hidden;
 }
 
 .fa-angle-double-right:before {
@@ -72,6 +73,11 @@
 .dropdown {
   position: relative;
   display: inline-block;
+  transition: transform .5s cubic-bezier(.41,1.46,.53,-0.56);
+}
+
+.dropdown:hover {
+  transform: rotate(20deg);
 }
 
 .dropdown-content {
@@ -80,6 +86,7 @@
   background-color: $fields;
   min-width: 180px;
   z-index: 1;
+  visibility: hidden;
 }
 
 .dropdown-content a {
