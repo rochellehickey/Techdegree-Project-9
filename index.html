@@ -284,14 +284,20 @@
       <section class="message-user division">
         <div class="wrapper">
           <h2>Message User</h2>
-          <form action="#" method="post">
+          <form action="#" method="post" id="messageForm">
             <div>
               <label for="name" class="visuallyhidden">Search for User</label>
-              <input type="text" id="search-for-user" name="search_for_user" placeholder="Search for User">
+              <input type="text" id="search-for-user" name="search_for_user" placeholder="Search for User" list="members" required>
+              <datalist id="members"> <!-- Autocomplete -->
+                <option value="Victoria Chambers">
+                <option value="Dale Byrd">
+                <option value="Dawn Wood">
+                <option value="Dan Oliver">
+              </datalist>
             </div>
             <div>
               <label for="msg" class="visuallyhidden">Message for User</label>
-              <textarea id="msg" name="user_message" placeholder="Message for User"></textarea>
+              <textarea id="msg" name="user_message" placeholder="Message for User" required></textarea>
             </div>
             <div class="button">
               <button type="submit" class="send">Send</button>

@@ -15,6 +15,7 @@ const hourlyButton = document.querySelector(".hourly");
 const dailyButton = document.querySelector(".daily");
 const weeklyButton = document.querySelector(".weekly");
 const monthlyButton = document.querySelector(".monthly");
+const messageForm = document.getElementById("messageForm");
 
 
 // NAVIGATION
@@ -23,9 +24,6 @@ notificationBell.addEventListener('click', function() {
   navArrow.classList.toggle('show');
   navDropDownContent.classList.toggle('show');
 });
-
-
-
 
 // Keep secondary nav button appearing active after button has been clicked
 iconDashboard.addEventListener('click', function() {
@@ -271,10 +269,7 @@ const mobileUserChart = new Chart(myMobileChart, {
     },
 });
 
-
-
-
-
+// MESSAGE FORM SUBMITION
 
 
 
