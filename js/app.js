@@ -15,7 +15,6 @@ const hourlyButton = document.querySelector(".hourly");
 const dailyButton = document.querySelector(".daily");
 const weeklyButton = document.querySelector(".weekly");
 const monthlyButton = document.querySelector(".monthly");
-const messageForm = document.getElementById("messageForm");
 
 
 // NAVIGATION
@@ -271,36 +270,53 @@ const mobileUserChart = new Chart(myMobileChart, {
 
 // MESSAGE FORM SUBMITION
 
-const validator = new FormValidator('messageForm', [{
-    name: 'search-for-user',
-    display: 'User Name',
-    rules: 'required'
-  }, {
-    name: 'user-message',
-    display: 'Message',
-    rules: 'required'
-  }], function(errors, evt) {
-        // Show the errors
-        const SELECTOR_ERRORS = document.querySelector('.error_box');
-        const SELECTOR_SUCCESS = document.querySelector('.success_box');
+const messageForm = document.getElementById("messageForm");
+const searchForUser = document.getElementById("search-for-user");
+const userMessage = document.getElementById("msg");
+const okButton = document.getElementById("okButton");
 
-        if (errors.length > 0) {
-          SELECTOR_ERRORS.empty();
+searchForUser.addEventListener('click', function (event) {
+  let isValidUser = searchForUser.checkValidity();
 
-          for (var i = 0, errorLength = errors.length; i < errorLength; i++) {
-            SELECTOR_ERRORS.append(errors[i].message + '<br />');
-          }
+  if (isValidUser) {
+    okButton.disabled = false;
+  } else {
+    okButton.disabled = true;
+  }
+});
 
-          SELECTOR_SUCCESS.classList.toggle = "show";
-        } else {
-          SELECTOR_ERRORS.classList.toggle = "show";
-        }
+userMessage.addEventListener('click', function (event) {
+  let isValidMessage = userMessage.checkValidity();
 
-        if (evt && evt.preventDefault) {
-          evt.preventDefault();
-        } else if (event) {
-          event.returnValue = false;
-        }
-    });
+  if (isValidMessage) {
+    okButton.disabled = false;
+  } else {
+    okButton.disabled = true;
+  }
+});
+
+okButton.addEventListener('click', function (event) {
+  messageForm.submit();
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
