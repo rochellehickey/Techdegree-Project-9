@@ -284,10 +284,12 @@
       <section class="message-user division">
         <div class="wrapper">
           <h2>Message User</h2>
+          <div class="success_box">All of the fields were successfully validated!</div>
+          <div class="error_box"></div>
           <form action="#" method="post" id="messageForm">
             <div>
-              <label for="name" class="visuallyhidden">Search for User</label>
-              <input type="text" id="search-for-user" name="search_for_user" placeholder="Search for User" list="members" required>
+              <label for="search-for-user" class="visuallyhidden">Search for User</label>
+              <input type="text" id="search-for-user" name="search-for-user" placeholder="Search for User" list="members">
               <datalist id="members"> <!-- Autocomplete -->
                 <option value="Victoria Chambers">
                 <option value="Dale Byrd">
@@ -297,7 +299,7 @@
             </div>
             <div>
               <label for="msg" class="visuallyhidden">Message for User</label>
-              <textarea id="msg" name="user_message" placeholder="Message for User" required></textarea>
+              <textarea id="msg" name="user-message" placeholder="Message for User"></textarea>
             </div>
             <div class="button">
               <button type="submit" class="send">Send</button>
@@ -358,5 +360,6 @@
   </main>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-<script src="js/app.js"></script>
+<script src="js/validate.js" type="text/javascript"></script>
+<script src="js/app.js" type="text/javascript"></script>
 </html>

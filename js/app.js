@@ -271,6 +271,36 @@ const mobileUserChart = new Chart(myMobileChart, {
 
 // MESSAGE FORM SUBMITION
 
+const validator = new FormValidator('messageForm', [{
+    name: 'search-for-user',
+    display: 'User Name',
+    rules: 'required'
+  }, {
+    name: 'user-message',
+    display: 'Message',
+    rules: 'required'
+  }], function(errors, evt) {
+        // Show the errors
+        const SELECTOR_ERRORS = document.querySelector('.error_box');
+        const SELECTOR_SUCCESS = document.querySelector('.success_box');
 
+        if (errors.length > 0) {
+          SELECTOR_ERRORS.empty();
+
+          for (var i = 0, errorLength = errors.length; i < errorLength; i++) {
+            SELECTOR_ERRORS.append(errors[i].message + '<br />');
+          }
+
+          SELECTOR_SUCCESS.classList.toggle = "show";
+        } else {
+          SELECTOR_ERRORS.classList.toggle = "show";
+        }
+
+        if (evt && evt.preventDefault) {
+          evt.preventDefault();
+        } else if (event) {
+          event.returnValue = false;
+        }
+    });
 
 

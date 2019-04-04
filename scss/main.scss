@@ -85,6 +85,11 @@ select {
   display: none;
 }
 
+.error_box,
+.success_box {
+  visibility: hidden;
+}
+
 @media (min-width: 768px) {
   main {
     display: flex;
