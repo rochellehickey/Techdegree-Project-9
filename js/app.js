@@ -270,33 +270,26 @@ const mobileUserChart = new Chart(myMobileChart, {
 
 // MESSAGE FORM SUBMITION
 
-const messageForm = document.getElementById("messageForm");
-const searchForUser = document.getElementById("search-for-user");
-const userMessage = document.getElementById("msg");
-const okButton = document.getElementById("okButton");
+const messageForm = document.getElementById('messageForm');
+const recipientField = document.getElementById('search-for-user');
+const messageField = document.getElementById('msg');
+const submitButton = document.getElementById('submit-button');
+const errorMessage = document.getElementById('error-message');
+const successMessage = document.getElementById('success-message');
 
-searchForUser.addEventListener('click', function (event) {
-  let isValidUser = searchForUser.checkValidity();
-
-  if (isValidUser) {
-    okButton.disabled = false;
+submitButton.addEventListener('click', function (event) {
+  successMessage.classList.add('hidden');
+  errorMessage.classList.add('hidden');
+  isValidRecipient = recipientField.checkValidity();
+  isValidMessage = messageField.checkValidity();
+  if (isValidRecipient && isValidMessage) {
+    event.preventDefault();
+    successMessage.classList.remove('hidden');
+    messageForm.parentNode.removeChild(messageForm);
   } else {
-    okButton.disabled = true;
+    errorMessage.classList.remove('hidden');
+    return false;
   }
-});
-
-userMessage.addEventListener('click', function (event) {
-  let isValidMessage = userMessage.checkValidity();
-
-  if (isValidMessage) {
-    okButton.disabled = false;
-  } else {
-    okButton.disabled = true;
-  }
-});
-
-okButton.addEventListener('click', function (event) {
-  messageForm.submit();
 });
 
 

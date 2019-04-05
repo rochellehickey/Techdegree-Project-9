@@ -11,15 +11,7 @@
 /* ------------------------------------------- */
 /* --------------- TYPOGRAPHY ---------------- */
 /* ------------------------------------------- */
-h1,
-h2,
-p,
-input,
-ul,
-li,
-form,
-button,
-span {
+body {
   font-family: "Open Sans", sans-serif;
 }
 
@@ -43,7 +35,8 @@ li,
 input,
 form,
 textarea,
-select {
+select,
+div {
   font-size: 1em;
   font-weight: 400;
   color: #707070;
@@ -1592,9 +1585,20 @@ select {
   display: none;
 }
 
-.error_box,
-.success_box {
-  visibility: hidden;
+.error-message,
+.success-message {
+  width: 100%;
+  border-radius: 4px;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+.error-message {
+  border: 1px solid #BE7576;
+}
+
+.success-message {
+  border: 1px solid #84CD94;
 }
 
 @media (min-width: 768px) {

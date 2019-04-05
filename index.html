@@ -284,6 +284,8 @@
       <section class="message-user division">
         <div class="wrapper">
           <h2>Message User</h2>
+          <div class="error-message hidden" id="error-message">Error: You must fill out all form fields.</div>
+          <div class="success-message hidden" id="success-message">Success! Your message has been sent.</div>
           <form action="#" method="post" id="messageForm">
             <div>
               <label for="search-for-user" class="visuallyhidden">Search for User</label>
@@ -300,7 +302,7 @@
               <textarea id="msg" name="user-message" placeholder="Message for User" required></textarea>
             </div>
             <div class="button">
-              <button type="submit" id="okButton" class="send" disabled>Send</button>
+              <button type="submit" id="submit-button" class="send">Send</button>
             </div>
           </form>
         </div>

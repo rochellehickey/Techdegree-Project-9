@@ -2,15 +2,7 @@
 /* --------------- TYPOGRAPHY ---------------- */
 /* ------------------------------------------- */
 
-h1,
-h2,
-p,
-input,
-ul,
-li,
-form,
-button,
-span {
+body {
   font-family: $primary-font;
 }
 
@@ -34,7 +26,8 @@ li,
 input,
 form,
 textarea,
-select {
+select,
+div {
   font-size: $paragraph-size;
   font-weight: $font-weight-regular;
   color: $dark-grey;

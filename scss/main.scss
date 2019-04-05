@@ -85,9 +85,19 @@ select {
   display: none;
 }
 
-.error_box,
-.success_box {
-  visibility: hidden;
+.error-message,
+.success-message {
+  width: 100%;
+  border-radius: 4px;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+.error-message {
+  border: 1px solid $error;
+}
+.success-message {
+  border: 1px solid $tertiary-color;
 }
 
 @media (min-width: 768px) {
