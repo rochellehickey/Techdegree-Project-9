@@ -15,6 +15,19 @@ const hourlyButton = document.querySelector(".hourly");
 const dailyButton = document.querySelector(".daily");
 const weeklyButton = document.querySelector(".weekly");
 const monthlyButton = document.querySelector(".monthly");
+const messageForm = document.getElementById('messageForm');
+const recipientField = document.getElementById('search-for-user');
+const messageField = document.getElementById('msg');
+const submitButton = document.getElementById('submit-button');
+const errorMessage = document.getElementById('error-message');
+const successMessage = document.getElementById('success-message');
+const storableCheckboxes = document.querySelectorAll('.checkbox-store-me');
+const sliderEmail = document.getElementById('checkbox-slider-email');
+const sliderPublic = document.getElementById('checkbox-slider-public');
+const zone = document.getElementById('zone');
+const saveSettings = document.getElementById("save-settings");
+const cancelSettings = document.getElementById("cancel-settings");
+
 
 
 // NAVIGATION
@@ -269,14 +282,6 @@ const mobileUserChart = new Chart(myMobileChart, {
 });
 
 // MESSAGE FORM SUBMITION
-
-const messageForm = document.getElementById('messageForm');
-const recipientField = document.getElementById('search-for-user');
-const messageField = document.getElementById('msg');
-const submitButton = document.getElementById('submit-button');
-const errorMessage = document.getElementById('error-message');
-const successMessage = document.getElementById('success-message');
-
 submitButton.addEventListener('click', function (event) {
   successMessage.classList.add('hidden');
   errorMessage.classList.add('hidden');
@@ -292,22 +297,38 @@ submitButton.addEventListener('click', function (event) {
   }
 });
 
+// LOCAL STORAGE
+function save() {
+  localStorage.setItem("checkbox-email", sliderEmail.checked);
+  localStorage.setItem("checkbox-public", sliderPublic.checked);
+  localStorage.setItem("select-zone", zone.value);
+}
 
+//for loading
+let sliderEmailValue = JSON.parse(localStorage.getItem("checkbox-email"));
+let sliderPublicValue = JSON.parse(localStorage.getItem("checkbox-public"));
+let zoneValue = JSON.parse(localStorage.getItem("select-zone"));
 
+if (sliderEmailValue) {
+  sliderEmail.checked = sliderEmailValue;
+}
+if (sliderPublicValue) {
+  sliderPublic.checked = sliderPublicValue;
+}
+if (zoneValue) {
+  zone.value = zoneValue;
+}
 
+saveSettings.addEventListener('click', function(event) {
+  event.preventDefault();
+  save();
+});
 
-
-
-
-
-
-
-
-
-
-
-
-
+cancelSettings.addEventListener('click', function() {
+  localStorage.clear();
+  sliderEmail.checked = false;
+  sliderPublic.checked = false;
+});
 
 
 

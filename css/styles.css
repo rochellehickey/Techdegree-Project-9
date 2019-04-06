@@ -114,8 +114,7 @@ button {
   .dashboard-active {
     border-bottom: none;
   }
-}
-@media (min-width: 768px) {
+
   #iconDashboard,
 #iconMembers,
 #iconVisits,

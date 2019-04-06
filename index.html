@@ -314,7 +314,7 @@
             <p>Send Email Notifications</p>
             <div class="slider-on-off">
               <label class="switch-light switch-ios" onclick="">
-                <input type="checkbox">
+                <input type="checkbox" id="checkbox-slider-email" class="checkbox-store-me">
                 <span>
                   <span>OFF</span>
                   <span>ON</span>
@@ -327,7 +327,7 @@
             <p>Set Profile to Public</p>
             <div class="slider-on-off">
               <label class="switch-light switch-ios" onclick="">
-                <input type="checkbox">
+                <input type="checkbox" id="checkbox-slider-public" class="checkbox-store-me">
                 <span>
                   <span>OFF</span>
                   <span>ON</span>
@@ -336,8 +336,8 @@
               </label>
             </div>
           </div>
-          <form action="#" method="post">
-            <select name="zone">
+          <form action="#" method="post" id="timezone">
+            <select name="zone" id="zone">
                 <option value="1" selected>Select Timezone</option>
                 <option value="2">Pacific (PST)</option>
                 <option value="3">Mountain (MST)</option>
@@ -346,10 +346,10 @@
             </select>
             <div class="button-group">
               <div class="button save-cancel">
-                <button type="submit" class="save">Save</button>
+                <button type="submit" id="save-settings" class="save">Save</button>
               </div>
               <div class="button save-cancel">
-                <button type="reset" class="cancel">Cancel</button>
+                <button type="reset" id="cancel-settings" class="cancel">Cancel</button>
               </div>
             </div>
           </form>
